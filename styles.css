@@ -54,6 +54,10 @@
 		font: 1.8rem/1.95 'Dancing Script', cursive;
 		font-weight: 700;
 	}
+	h5 em {
+		text-decoration: underline;
+		font-style: normal;
+	}
 	section {
 		color: rgb(136, 136, 136);
 		margin: 5rem 0;
