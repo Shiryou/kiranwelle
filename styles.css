@@ -1,0 +1,184 @@
+@charset "utf-8";
+/* CSS Document */
+
+	* {
+		padding: 0px;
+		margin: 0px;
+	}
+	html {
+		font: 100%/1.95 'Nunito Sans';
+	}
+	body {
+		font-weight: 400;
+		font-size: 16px;
+		font-kerning: normal;
+		font-feature-settingss: "kern", "liga", "clig", "calt";
+	}
+	.wrapper {
+		width: 100%;
+	}
+	footer {
+		margin: 5rem 0 0;
+		text-align: center;
+	}
+	footer .ko-fi {
+		background: url('https://uploads-ssl.webflow.com/5c14e387dab576fe667689cf/5ca5bf1dff3c03fbf7cc9b3c_Kofi_logo_RGB_rounded-p-500.png');
+		background-size: contain;
+		display: inline-block;
+		height: 1em;
+		width: 1em;
+		margin: -.1em;
+	}
+	a {
+		color: #631547;
+	}
+	p {
+		margin: 0.9em 0 0;
+	}
+	h1 {
+		font: 4.5rem/1.95 'Dancing Script', cursive;
+		font-weight: 700;
+	}
+	h2 {
+		font-weight: 500;
+		font-size: 2rem;
+	}
+	h4 {
+		font-weight: 600;
+		font-size: 1.4em;
+	}
+	h5 {
+		color: black;
+		text-align: center;
+		margin: 25px 0;
+		font: 1.8rem/1.95 'Dancing Script', cursive;
+		font-weight: 700;
+	}
+	section {
+		color: rgb(136, 136, 136);
+		margin: 5rem 0;
+	}
+	
+	.flex section, .flex section h5 {
+		padding-top: 0px;
+		margin-top: 0px;
+		padding-bottom: 0px;
+		margin-bottom: 0px;
+	}
+	
+	#content {
+		padding: 0px 10rem;
+	}
+	
+	.me {
+		background: url('https://worthwelle.com/img/sandiego-blur.jpg');
+		background-position: top;
+		background-size: cover;
+		overflow: hidden;
+		padding: 0px 20rem;
+		height: 300px;
+		border-bottom-left-radius: 100% -100px ;
+		border-bottom-right-radius: 100% 100px;
+	}
+	
+	.title {
+		background: url('https://worthwelle.com/img/sandiego-blur.jpg');
+		background-position: top;
+		background-size: cover;
+		text-align: right;
+		padding: 5rem 10rem;
+		border-bottom-left-radius: 100% -100px ;
+		border-bottom-right-radius: 100% 100px;
+	}
+
+	.title h1 {
+		height: 150px;
+	}
+	
+	.name:before {
+		content: "👋";
+		padding-right: 1.5rem;
+	}
+	
+	.blurb {
+		padding: 2rem 0;
+		color: #515151;
+		max-width: 540px;
+		font-weight: 200;
+		line-height:1.4;
+	}
+
+	.return {
+		position: absolute;
+		top: 10px;
+		
+		text-decoration: none;
+		border-bottom: 3px solid #631547;
+		background-color: white;
+	}
+	
+	.flex {
+		display: flex;
+	}
+	
+	.job {
+		border-radius: 10px;
+		border: 1px solid #C0C0C0;
+		padding: 2.5rem;
+		flex-grow: 1;
+		flex-basis: 0;
+	}
+	
+	.job h4 {
+		color:#000;
+	}
+	
+	.skills, .principles, .education {
+		padding: 2.5rem;
+		margin: 0px;
+		flex-grow: 1;
+		flex-basis: 0;
+	}
+	.helping {
+		column-count: 2;
+	}
+	.helping li {
+		list-style: none;
+	}
+
+	article ul {
+		margin: 0.9em 0 0;
+		padding-left: 2em;
+	}
+
+	hr {
+		width: 80%;
+		margin: 1.2em auto;
+		border-top: 1px solid #ccc;
+	}
+	
+	@media screen and (min-width:60rem) {
+		.job, .skills, .principles, .education {
+		min-width: 20%;
+		max-width: 30%;
+		padding-right: 3rem;
+		margin-right: 2rem;
+		}
+	}
+	
+	.superuser:before {
+		background-image: url('https://cdn.sstatic.net/Sites/superuser/img/apple-touch-icon.png?v=0ad5b7a83e49');
+		background-size: 15px 15px;
+		display: inline-block;
+		width: 15px; 
+		height: 15px;
+		content:"";
+	}
+	.stackoverflow:before {
+		background-image: url('https://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon.png?v=c78bd457575a');
+		background-size: 15px 15px;
+		display: inline-block;
+		width: 15px; 
+		height: 15px;
+		content:"";
+	}
