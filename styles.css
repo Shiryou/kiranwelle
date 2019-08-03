@@ -57,9 +57,10 @@
 	h5 em {
 		text-decoration: underline;
 		font-style: normal;
+		border-bottom: 1px solid;
 	}
 	section {
-		color: rgb(136, 136, 136);
+		color: #515151;
 		margin: 5rem 0;
 	}
 	
@@ -108,7 +109,7 @@
 		padding: 2rem 0;
 		color: #515151;
 		max-width: 540px;
-		font-weight: 200;
+		font-weight: 300;
 		line-height:1.4;
 	}
 
