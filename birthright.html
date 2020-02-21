@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Installing Birthright: The Gorgon's Alliance on Windows 10 - Kiran Welle</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,500,700" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Dancing+Script:200,300,700" rel="stylesheet" type="text/css">
+<link href="styles.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="title">
+			<a href="./" class="return">&larr; Return</a>
+			<h1>Installing Birthright: The Gorgon's Alliance on Windows 10</h1>
+		</div>
+		<div id="content" class="container">
+			
+			<article>
+				<img src="img/posts/birthright/cover.jpg">
+				<p>One of the things I find most interesting about desktop support is trying to support legacy hardware and software. Not only does it provide an opportunity to learn more about the history of computing, but it also tends to provide some interesting compatibility challenges.</p>
+
+				<p>The place where I run into this most often and that I think gets the most words written about it on the Internet is in getting old games running on modern hardware and operating systems.</p>
+
+				<p>Surprisingly, Windows 10 still supports a wide array of classic 16-bit games that one might expect would never run. That includes the title I'm writing about today: <em>Birthright: The Gorgon's Alliance</em>.</p>
+
+				<h5 id="installing">Installing the game</h5>
+				
+				<p>Getting the game running in Windows 10 is surprisingly easy. You only need a few things to get started:</p>
+				
+				<ul>
+					<li>A Birthright: The Gorgon's Alliance CD or and ISO image of the CD.</li>
+					<li><a href="https://www.7-zip.org/download.html">7-zip</a> to extract the game files from the 1.4 patch.</li>
+					<li><a href="http://www.birthright.net/forums/downloads.php?do=file&id=93">Patch 1.4</a> to update the game to the latest version.</li>
+					<li><a href="http://www.birthright.net/forums/downloads.php?do=file&id=94">Scenario Editor</a> (optional) to mod the game.</li>
+					<li><a href="http://www.birthright.net/forums/downloads.php?do=file&id=91">Character Editor</a> (optional) to mod the game.</li>
+				</ul>
+				
+				<ol>
+					<img class="list" src="img/posts/birthright/cd.png">
+					<li>Insert the CD into the CD-ROM drive or mount the ISO image of the CD by double-clicking it.</li>
+					<img class="list" src="img/posts/birthright/birthrt.png">
+					<li>Create a folder named BIRTHRT in the root of the C drive.</li>
+					<img class="list" src="img/posts/birthright/copy.png">
+					<li>Copy all of the files from the CD to the BIRTHRT folder.</li>
+					<img class="list" src="img/posts/birthright/extract.png">
+					<li>Extract the contents of the patch and, if desired, the Scenario Editor and Character Editor.</li>
+					<img class="list" src="img/posts/birthright/patch.png">
+					<li>patch.exe is an installer file that will not run on Windows 10. Instead, use 7-zip to extract all of the files from the executable.</li>
+					<img class="list" src="img/posts/birthright/patch_warn.png">
+					<li>You'll likely see a warning that the file could not be opened as a [PE] archive and was opened as a [zip] archive instead. This is fine and doesn't require any action.</li>
+					<img class="list" src="img/posts/birthright/move.png">
+					<li>Move the resulting files from the last two steps to the BIRTHRT folder.</li>
+					<img class="list" src="img/posts/birthright/logo.png">
+					<li>Double click WINBR.EXE to start the game.</li>
+					<img class="list" src="img/posts/birthright/editors.png">
+					<li>If you included them in the setup, you can also double click CHARED.EXE or SCENED95.EXE to start the Character Editor or Scenario Editor, respectively.</li>
+				</ol>
+                
+                <h5 id="learning">History</h5>
+                
+                <p><em>Birthright: The Gorgon's Alliance</em> is a PC game released for both Windows and MS-DOS in 1997.  It was developed by Synergistic Software, a division of Sierra On-Line, who also developed the Hellfire expansion for Blizzard's Diablo the same year.</p>
+                
+                <p>The game is an adaptation of the Birthright campaign setting for the Advanced Dungeons and Dragons line. In the campaign setting, players can become rulers of nations imbued with some of the divine power released when their gods fought a great battle and were destroyed.</p>
+                
+                <p>The PC game is split into three sections, which can be played separately or as part of a larger game. Realm play allows the player to control a nation and the policitcal and economic interests thereof. In Adventure play, the player takes a group of adventurers into dungeons, castles and dense forests to find items of power or battle powerful foes. In Battle play, they player can arrange his troops on a realtime battlefield and test his strategy against the computer.</p>
+                
+                <p>Although I can no longer find reference to its planned sequels, any hope of more of the Birthright setting in videogame form was lost when the game was not able to please fans.</p>
+                
+                <h5 id="modding">Modding the Game</h5>
+                <p>Aside from the Scenario Editor and Character Editor, there are currently no tools for modefying Birthright's assets. Thanks to some digging, by <a href="http://www.birthright.net/">Birthright.net</a> user <a href="http://www.birthright.net/forums/member.php?25142-kasrkraw">kasrkraw</a>, there is <a href="http://www.birthright.net/forums/showthread.php?28766-Modding-Birthright-Gorgon-s-Alliance-Adventures&highlight=modding">some information available</a> on the modified Doom engine that Birthright uses to run its adventures.
+				
+				<h5 id="troubleshooting">Troubleshooting</h5>
+				<h6>failed writing initial conditions file</h6>
+				<img class="list" src="img/posts/birthright/initial_cond.png">
+				<p>When I first started testing this setup on a different PC, I ran into an error message after the intro cinematic saying "failed writing initial conditions file". This was caused by the fact that I transferred the files from the CD to my computer using TeraCopy, which marked the files as read-only. To solve this:</p>
+				<ol>
+					<li>Select all of the files in the BIRTHRT folder.</li>
+					<li>Right click the selected files and click <em>Properties</em>.</li>
+                    <img class="list" src="img/posts/birthright/read_only.png">
+					<li>Uncheck the <em>Read-only</em> option.</li>
+					<li>Select <em>Apply changes to the selected items, subfolders and files</em> and click <em>OK</em>.</li>
+                </ol>
+                
+                <h6>Please insert your Birthright CD</h6>
+				<img class="list" src="img/posts/birthright/no_cd.png">
+                <p>If you have your CD inserted, but you see the error message "Please insert your Birthright CD. Click Cancel to exit.", it likely means that the drive letter of the CD has changed. To fix this:
+                
+                <ol>
+                    <img class="list" src="img/posts/birthright/cfg_file.png">
+                    <li>Open the file BRSETUP.CFG in any text editor.</li>
+                    <li>Change the letter beneath the text "[CD]" to the drive letter of the CD.</li>
+                </ol>
+			</article>
+			<footer>
+				<a href="https://ko-fi.com/worthwelle" class="ko-fi"></a> © 2019 Kiran Welle
+			</footer>
+		</div>
+	</div>
+</body>
+</html>

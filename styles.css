@@ -59,6 +59,13 @@ h5 em {
     font-style: normal;
     border-bottom: 1px solid;
 }
+h6 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 25px 0;
+    font-height: 1.4;
+    font-weight: 700;
+}
 section {
     color: #515151;
     margin: 5rem 0;
@@ -136,6 +143,17 @@ section {
 }
 .helping li {
     list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    margin: auto;
+    display: block;
+}
+
+img.list {
+    padding-top: 3rem;
 }
 
 .skills, .principles, .education {
