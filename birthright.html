@@ -7,9 +7,10 @@
 <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,500,700" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Dancing+Script:200,300,700" rel="stylesheet" type="text/css">
 <link href="styles.css" rel="stylesheet" type="text/css">
+<script src="scripts.js"></script>
 </head>
 
-<body>
+<body onload="createTOC();">
 	<div class="wrapper">
 		<div class="title">
 			<a href="./" class="return">&larr; Return</a>
@@ -25,16 +26,19 @@
 
 				<p>Surprisingly, Windows 10 still supports a wide array of classic 16-bit games that one might expect would never run. That includes the title I'm writing about today: <em>Birthright: The Gorgon's Alliance</em>.</p>
 
-				<h5 id="installing">Installing the game</h5>
+				<div id="toc"></div>
+
+				<h2 id="installing">Installing the game</h2>
 				
 				<p>Getting the game running in Windows 10 is surprisingly easy. You only need a few things to get started:</p>
 				
 				<ul>
 					<li>A Birthright: The Gorgon's Alliance CD or an ISO image of the CD.</li>
-					<li><a href="https://www.7-zip.org/download.html">7-zip</a> to extract the game files from the 1.4 patch.</li>
-					<li><a href="http://www.birthright.net/forums/downloads.php?do=file&id=93">Patch 1.4</a> to update the game to the latest version.</li>
-					<li><a href="http://www.birthright.net/forums/downloads.php?do=file&id=94">Scenario Editor</a> (optional) to mod the game.</li>
-					<li><a href="http://www.birthright.net/forums/downloads.php?do=file&id=91">Character Editor</a> (optional) to mod the game.</li>
+					<li><a href="https://www.7-zip.org/download.html" target="_blank">7-zip</a> to extract the game files from the 1.4 patch.</li>
+					<li><a href="http://www.birthright.net/forums/downloads.php?do=file&id=93" target="_blank">Patch 1.4</a> to update the game to the latest version.</li>
+					<li><a href="http://www.birthright.net/forums/downloads.php?do=file&id=94" target="_blank">Scenario Editor</a> (optional) to mod the game.</li>
+					<li><a href="http://www.birthright.net/forums/downloads.php?do=file&id=91" target="_blank">Character Editor</a> (optional) to mod the game.</li>
+					<li><a href="https://github.com/solemnwarning/ipxwrapper/releases" target="_blank">ipxwrapper</a> (optional) for multiplayer.</li>
 				</ul>
 				
 				<ol>
@@ -58,7 +62,7 @@
 					<li>If you included them in the setup, you can also double-click CHARED.EXE or SCENED95.EXE to start the Character Editor or Scenario Editor, respectively.</li>
 				</ol>
 				
-				<h5 id="learning">History</h5>
+				<h2 id="learning">History</h2>
 				
 				<p><em>Birthright: The Gorgon's Alliance</em> is a PC game released for both Windows and MS-DOS in 1997.  It was developed by Synergistic Software, a division of Sierra On-Line, who also developed the Hellfire expansion for Blizzard's Diablo the same year.</p>
 				
@@ -68,10 +72,10 @@
 				
 				<p>Although I can no longer find reference to its planned sequels, any hope of more of the Birthright setting in videogame form was lost when the game was not able to please fans.</p>
 				
-				<h5 id="modding">Modding the Game</h5>
+				<h2 id="modding">Modding the Game</h2>
 				<p>Aside from the Scenario Editor and Character Editor, there are currently no tools for modifying Birthright's assets. Thanks to some digging, by <a href="http://www.birthright.net/">Birthright.net</a> user <a href="http://www.birthright.net/forums/member.php?25142-kasrkraw">kasrkraw</a>, there is <a href="http://www.birthright.net/forums/showthread.php?28766-Modding-Birthright-Gorgon-s-Alliance-Adventures&highlight=modding">some information available</a> on the modified Doom engine that Birthright uses to run its adventures.
 				
-				<h5 id="troubleshooting">Troubleshooting</h5>
+				<h2 id="troubleshooting">Troubleshooting</h2>
 				<h6>failed writing initial conditions file</h6>
 				<img class="list" src="img/posts/birthright/initial_cond.png">
 				<p>When I first started testing this setup on a different PC, I ran into an error message after the intro cinematic saying "failed writing initial conditions file". This was caused by the fact that I transferred the files from the CD to my computer using TeraCopy, which marked the files as read-only. To solve this:</p>

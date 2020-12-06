@@ -40,24 +40,24 @@ h1 {
     font-weight: 700;
 }
 h2 {
-    font-weight: 500;
-    font-size: 2rem;
-}
-h4 {
-    font-weight: 600;
-    font-size: 1.4em;
-}
-h5 {
     color: black;
     text-align: center;
     margin: 25px 0;
     font: 1.8rem/1.4 'Dancing Script', cursive;
     font-weight: 700;
 }
-h5 em {
+h2 em {
     text-decoration: underline;
     font-style: normal;
     border-bottom: 1px solid;
+}
+h4 {
+    font-weight: 600;
+    font-size: 1.4em;
+}
+h5, .me h2.blurb {
+    font-weight: 500;
+    font-size: 2rem;
 }
 h6 {
     text-align: center;
@@ -69,6 +69,11 @@ h6 {
 section {
     color: #515151;
     margin: 5rem 0;
+}
+
+ul, ol {
+    margin-left: 50px;
+    margin-right: 50px;
 }
 
 #content {
@@ -124,6 +129,11 @@ section {
     text-decoration: none;
     border-bottom: 3px solid #631547;
     background-color: transparent;
+}
+
+div#toc {
+    margin: auto;
+    width: fit-content;
 }
 
 .job {
@@ -239,6 +249,11 @@ hr {
         margin: 0px;
         flex-grow: 1;
         flex-basis: 0;
+    }
+    
+    .skills ul, .principles ul, .education ul, .skills ol, .principles ol, .education ol {
+        margin-left: 0px;
+        margin-right: 0px;
     }
 }
 
