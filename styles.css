@@ -99,10 +99,10 @@ ul, ol {
     background-size: cover;
     text-align: right;
     padding: 2rem 2rem 0;
+    margin-bottom: 2rem;
 }
 
 .title h1 {
-    height: 150px;
     padding-top: 2rem;
 }
 
