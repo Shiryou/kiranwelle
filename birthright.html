@@ -128,6 +128,17 @@
 				<h2 id="modding">Modding the Game</h2>
 				<p>Aside from the Scenario Editor and Character Editor, there are currently no tools for modifying Birthright's assets. Thanks to some digging, by <a href="http://www.birthright.net/">Birthright.net</a> user <a href="http://www.birthright.net/forums/member.php?25142-kasrkraw">kasrkraw</a>, there is <a href="http://www.birthright.net/forums/showthread.php?28766-Modding-Birthright-Gorgon-s-Alliance-Adventures&highlight=modding">some information available</a> on the modified Doom engine that Birthright uses to run its adventures.
 
+				<h2 id="compiling">Compiling the game</h2>
+				<p>In 2018, Al Lowe, the creator of another of my favorite Sierra games (<a href="https://www.mobygames.com/game/torins-passage"><em>Torin's Passage</em></a>), <a href="https://www.pcgamer.com/leisure-suit-larry-creator-al-lowe-is-selling-his-archive-including-sierra-source-code/">sold his archive of old Sierra "junk"</a>. This junk included diskettes containing old Sierra source code. A year later, the code for <em>Birthright: The Gorgon's Alliance</em> appeared <a href="https://archive.org/details/birthrt_source">on the Internet Archive</a>.</p>
+				<p>I have not been able to successfully compile the game yet, but <a href="http://www.birthright.net/forums/showthread.php?28960-Any-tech-savvy-peeps-here-interested-in-the-Birthright-PC-game-source-code&p=92991&viewfull=1#post92991">here are my notes</a> on the process thus far.</p>
+				<p>The necessary libraries and packages are:</p>
+				<ul>
+					<li><a href="http://www.openwatcom.org/download.php">OpenWatcom 1.9</a> - The C++ compiler (including the <code>wmake</code> utility) used to compile the source. Make sure to run <code>setenvironment.bat</code> to add the necessary include files.</li>
+					<li><a href="https://archive.org/details/dxsdk_apr2005">Microsoft DirectX SDK April 2005</a> - The latest version of the DirectX SDK that seems to include <code>dpay.h</code>.</li>
+					<li><a href="https://winworldpc.com/product/windows-sdk-ddk/windows-95-ddk">Windows 95 SDK</a> - This SDK containes some necessary include files.</li>
+				</ul>
+				<p>It's not necessary to install the two SDKs. You can simply extract the include directories and add them to OpenWatcom's <code>INCLUDE</code> environment variable.</p>
+
 				<h2 id="troubleshooting">Troubleshooting</h2>
 				<h6>failed writing initial conditions file</h6>
 				<img class="list" src="img/posts/birthright/initial_cond.png">
