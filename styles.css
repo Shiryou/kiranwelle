@@ -80,6 +80,31 @@ ul, ol {
     padding: 0px 2rem;
 }
 
+.contact {
+    width: 500px;
+    margin: auto;
+    text-align: center;
+}
+
+.contact i.fa-brands {
+    font-size: 3em;
+    padding: 0.5em 0.25em;
+}
+
+.contact i.fas {
+    font-size: 3em;
+    padding: 0.5em 0.25em;
+}
+
+.contact i.kofi::after {
+      content: '\f004';
+      font-weight: 900;
+      font-size: 0.4em;
+      color: #FFFFFF;
+      position: absolute;
+      margin: 1.2em 0 0 -2.04em;
+}
+
 .before {
     margin-top: 0px;
 }
