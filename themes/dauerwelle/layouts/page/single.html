@@ -10,6 +10,9 @@
 		<div class="title">
 			<a href="{{ relURL "/" }}" class="return">&larr; Return</a>
 			<h1>{{ .Title }}</h1>
+			{{ if .Params.series }}
+			<div><b>Part of the <a href="{{ relURL "/" }}series/{{ (index .Params.series 0 | urlize) }}.html">{{ index .Params.series 0 }}</a> series</b></div>
+			{{ end }}
 		</div>
 		<div id="content" class="container">
 			{{ .Content }}
