@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="{{ or site.Language.LanguageCode site.Language.Lang }}" dir="{{ or site.Language.LanguageDirection `ltr` }}">
+{{ partial "head.html" . }}
+{{ block "head" . }}{{ end }}
+	</head>
+	<body{{ if .Params.signature }} onload="createTOC();"{{ end }}>
+		<div class="wrapper">
+			{{ block "main" . }}{{ end }}
+		</div>
+{{ partial "footer.html" . }}
+	{{ "<!-- " | safeHTML }} Generated on {{ time.Now | time.Format "Jan 02, 2006" }} at {{ time.Now | time.Format "15:04:05 MST" }}{{ " -->" | safeHTML }}
+	</body>
+</html>

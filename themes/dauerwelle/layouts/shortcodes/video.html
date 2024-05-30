@@ -1,0 +1,4 @@
+<video style="{{ .Get "style" | safeCSS }}" controls="{{ .Get "controls" }}">
+  <source src="{{ "/" | relURL }}img/{{ .Get "src" | safeURL }}" type="{{ .Get "type" | safeHTMLAttr }}">
+  Your browser does not support the video tag.
+</video>

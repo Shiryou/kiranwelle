@@ -1,0 +1,12 @@
+{{ define "main" }}
+		<div class="title">
+			<a href="{{ relURL "/" }}" class="return">&larr; Return</a>
+			<h1>{{ .Title }}</h1>
+		</div>
+<div id="content" class="container">
+	{{ .Content }}
+	<ul>
+		{{ range .Pages.ByTitle }}<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>{{ end }}
+	</ul>
+</div>
+{{ end }}

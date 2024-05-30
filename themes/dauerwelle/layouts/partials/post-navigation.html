@@ -1,0 +1,50 @@
+
+	<div class="previous-next-post-links">
+		<div>
+{{- if .PrevPage -}}
+			<a class="arrow arrow__left" href="{{ .PrevPage.RelPermalink }}">{{ .PrevPage.Title }}</a>
+{{- end -}}
+		</div>
+		<div class="nav-label"><a href="{{ relURL "/" }}index.html">All Posts</a></div>
+		<div>
+{{- if .NextPage -}}
+				<a class="arrow arrow__right" href="{{ .NextPage.RelPermalink }}">{{ .NextPage.Title }}</a>
+{{- end -}}
+		</div>
+	</div>
+
+	<div class="catnav" id="categoryNav">
+		<div class="card">
+			<div id="collapseOne" class="collapse" aria-labelledby="catnav-header" data-parent="#categoryNav">
+{{- range $cat := .Params.categories -}}
+	{{- range $catname, $catpages := $.Site.Taxonomies.categories -}}{{ if eq $catname ($cat | urlize) }}{{ $.Scratch.Set "neighbors" $catpages.Pages }}{{end}}{{- end -}}
+	{{- $neighbors := $.Scratch.Get "neighbors" -}}
+	{{- if $neighbors -}}
+		{{- $.Scratch.Set "prev" "" }}{{ $.Scratch.Set "next" "" }}
+		{{- range $neighbors.ByDate }}{{ if gt $.Date.Unix .Date.Unix }}{{ $.Scratch.Set "prev" . }}{{ end }}{{ end }}
+		{{- range $neighbors.ByDate.Reverse }}{{ if lt $.Date.Unix .Date.Unix }}{{ $.Scratch.Set "next" . }}{{ end }}{{ end }}
+	{{- end -}}
+	{{- $prev := $.Scratch.Get "prev" -}}
+	{{- $next := $.Scratch.Get "next" }}
+				<div class="previous-next-post-links">
+					<div>
+						{{- with $prev }}
+						<a class="arrow arrow__left" href="{{ $prev.RelPermalink }}">{{ $prev.Title | truncate 50 }}</a>
+						{{- end }}
+					</div>
+					<div class="nav-label"><a href="{{ relURL "/" }}categories/{{ $cat | urlize }}.html">{{$cat}}</a></div>
+						{{ with $next }}
+					<div>
+						<a class="arrow arrow__right" href="{{ $next.RelPermalink }}">{{ $next.Title }}</a>
+					</div>
+						{{ else }}<div></div>{{ end }}
+				</div>
+{{- end }}
+			</div>
+			<div class="catnav-header" id="catnav-header">
+				<button class="btn" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+				  View category navigation
+				</button>
+			</div>
+		</div>
+	</div>

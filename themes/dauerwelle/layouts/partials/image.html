@@ -1,0 +1,29 @@
+{{ $image := resources.Get (printf "%s" (.src | safeURL)) }}
+{{ $localScratch := newScratch }}
+{{ $localScratch.Set "srcset" " srcset='" }}
+{{ if (gt $image.Width 480) }}
+	{{ $small := $image.Resize "480x" }}
+	{{ $localScratch.Add "srcset" $small.RelPermalink }}
+	{{ $localScratch.Add "srcset" " 480w, " }}
+{{ end }}
+{{ if (gt $image.Width 800) }}
+	{{ $medium := $image.Resize "800x" }}
+	{{ $localScratch.Add "srcset" $medium.RelPermalink }}
+	{{ $localScratch.Add "srcset" " 800w, " }}
+{{ end }}
+{{ if (gt $image.Width 1400) }}
+	{{ $big := $image.Resize "1400x" }}
+	{{ $localScratch.Add "srcset" $big.RelPermalink }}
+	{{ $localScratch.Add "srcset" " 1400w, " }}
+{{ end }}
+{{ $localScratch.Add "srcset" "'" }}
+{{ $alt := .alt | markdownify | safeHTML }}
+{{ $caption := .caption | safeHTML }}
+
+{{ if eq ($localScratch.Get "srcset") " srcset=''" }}
+	{{ $localScratch.Set "srcset" "" }}
+{{ end }}
+<table class="image">
+<caption align="bottom">{{ if strings.ContainsNonSpace $caption }}{{ $caption }}{{ else }}&nbsp;{{ end }}</caption>
+<tr><td><a href="{{ $image.RelPermalink }}"><img src="{{ $image.RelPermalink }}" {{ $localScratch.Get "srcset" | safeHTMLAttr }} alt="{{ if $alt }}{{ $alt | plainify }}{{ else }}&nbsp;{{ end }}"></a></td></tr>
+</table>

@@ -1,0 +1,79 @@
+{{ define "head" }}
+{{ with .Params.cover_image }}<meta property="og:image" content="{{ . }}" />{{ end }}
+{{ with .Params.post_url }}<meta property="og:url" content="{{ . }}" />{{ end }}
+<meta property="og:type" content="article" />
+<meta property="og:title" content="{{ .Title }}" />
+{{ with .Params.description }}<meta property="og:description" content="{{ . }}" />{{ end }}
+{{ end }}
+{{ define "main" }}
+		<div class="title">
+			<a href="{{ relURL "/" }}" class="return">&larr; Return</a>
+			<h1>{{ .Title }}</h1>
+			{{ if .Params.series }}
+			<div><b>Part of the <a href="{{ relURL "/" }}series/{{ (index .Params.series 0 | urlize) }}.html">{{ index .Params.series 0 }}</a> series</b></div>
+			{{ end }}
+			<div class="post-meta">
+					{{ if isset .Params "date" }}
+						{{ .Scratch.Set "published" .Params.date }}
+					{{ else }}
+						{{ .Scratch.Set "published" .Date }}
+					{{ end }}
+				<time class="dt-published" datetime="{{ .Scratch.Get "published" | time.Format "2006-01-02T15:04:05Z07:00"  }}" itemprop="datePublished">
+					{{ $time := (.Scratch.Get "published" | time.Format "03:04:05 PM") }}
+					{{ .Scratch.Set "date_format" .Site.Params.dateTimeFormat }}
+					{{ if eq $time "12:00:00 AM" }}
+						{{ .Scratch.Set "date_format" .Site.Params.dateFormat }}
+					{{ end }}
+					{{ time.Format (.Scratch.Get "date_format") (.Scratch.Get "published") }}
+				</time>
+				{{ if .Params.Author }}
+					• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ .Params.Author }}</span></span>
+				{{ end }}
+				<ul class="post-categories">
+					{{ range sort (.GetTerms "categories") "Title" "asc" }}
+					<li><a href="{{ .RelPermalink }}">{{- .LinkTitle -}}</a></li>
+					{{ end }}
+				</ul>
+				<ul class="post-tags">
+					{{ range sort (.GetTerms "tags") "Title" "asc" }}
+					<li><a href="{{ .RelPermalink }}">{{- .LinkTitle -}}</a></li>
+					{{ end }}
+				</ul>
+				{{ if gt ((.GetTerms "people") | len) 0 }}
+				<div>
+					People mentioned:
+					<ul class="post-people">
+						{{ range sort (.GetTerms "people") "Title" "asc" }}
+						<li><a href="{{ .RelPermalink }}">{{- .LinkTitle -}}</a></li>
+						{{ end }}
+					</ul>
+				</div>
+				{{ end }}
+			</div>
+			
+			{{ if .Params.draft }}
+			<div class="post_notice">This entry is a draft. It is likely incomplete and may not have been saved yet.</div>
+			{{ end }}
+		</div>
+		<div id="content" class="container">
+			<article class="container post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+
+				{{ $page := . }}
+				{{ with .Params.translations }}
+					<div class="post_notice">This entry was translated here:
+					{{ range . }}
+						{{ $trans_url := print "/posts/" (index . "url") }}
+						<li><a href="{{ relref $page $trans_url }}">{{(index . "lang")}}</a></li>
+					{{ end }}
+					</div>
+				{{ end }}
+				<div class="post-content e-content" itemprop="articleBody">
+					{{ .Content }}
+				</div>
+				<!-- {{ partial "post-navigation.html" . }} -->
+				<a class="u-url" href="{{ .RelPermalink }}" hidden></a>
+			</article>
+		</div>
+
+{{ end }}

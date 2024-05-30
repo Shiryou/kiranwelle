@@ -207,6 +207,22 @@ hr {
     border-top: 1px solid #ccc;
 }
 
+code {
+    white-space: pre-wrap;
+    padding: 1px 5px;
+    background-color: #ffddf257;
+    border-radius: ;
+}
+
+pre code {
+    background-color: transparent;
+    display: block;
+}
+
+pre:has(> code) {
+    background-color: #ffddf257;
+}
+
 /* iPad */
 @media screen and (min-width:45rem) {
     .employer {

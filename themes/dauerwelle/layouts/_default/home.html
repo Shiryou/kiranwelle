@@ -1,0 +1,31 @@
+{{ define "head" }}
+		<script type="application/ld+json">
+		{
+			"@context": "http://schema.org",
+			"@type": "Person",
+			"name": "Kiran Welle",
+			"url": "https://www.kiranwelle.com",
+			"image": "https://avatars.githubusercontent.com/u/6108239",
+			"alumniOf": [
+				{
+					"@type": "CollegeOrUniversity",
+					"name": "California State University San Marcos",
+					"sameAs": "https://en.wikipedia.org/wiki/California_State_University_San_Marcos"
+				}
+			],
+			"address": {
+				"@type": "PostalAddress",
+				"addressLocality": "San Diego",
+				"addressRegion": "CA",
+			"addressCountry": "USA"
+			},
+			"sameAs": [
+				"https://www.linkedin.com/in/kiranwelle/en",
+				"https://github.com/Shiryou"
+			]
+		}
+		</script>
+{{ end }}
+{{ define "main" }}
+			{{ .Content }}
+{{ end }}

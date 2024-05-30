@@ -1,0 +1,23 @@
+{{ define "main" }}
+		<div class="title">
+			<a href="{{ relURL "/" }}" class="return">&larr; Return</a>
+			<h1>{{ .Title }}</h1>
+		</div>
+<div id="content" class="container">
+	{{ .Content }}
+	<ul class="post-list">
+	{{ range .Pages }}
+		<li>
+			<h3>
+				{{ if .Params.draft }}Draft:{{ end }}
+				<a class="post-link{{ if .Params.draft }} draft-link{{ end }}" href="{{ .RelPermalink }}">
+					{{ .Title }}
+				</a>
+			</h3>
+			<div class="post-meta">{{ .Date | time.Format ":date_long" }}</div>
+				{{ .Summary }}
+		</li>
+	{{ end }}
+	</ul>
+</div>
+{{ end }}

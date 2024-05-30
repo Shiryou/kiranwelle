@@ -1,0 +1,17 @@
+{{ define "head" }}
+{{ with .Params.cover_image }}<meta property="og:image" content="{{ . }}" />{{ end }}
+{{ with .Params.post_url }}<meta property="og:url" content="{{ . }}" />{{ end }}
+<meta property="og:type" content="article" />
+<meta property="og:title" content="{{ .Title }}" />
+{{ with .Params.description }}<meta property="og:description" content="{{ . }}" />{{ end }}
+{{ end }}
+
+{{ define "main" }}
+		<div class="title">
+			<a href="{{ relURL "/" }}" class="return">&larr; Return</a>
+			<h1>{{ .Title }}</h1>
+		</div>
+		<div id="content" class="container">
+			{{ .Content }}
+		</div>
+{{ end }}

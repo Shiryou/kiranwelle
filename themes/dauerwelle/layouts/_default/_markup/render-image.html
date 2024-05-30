@@ -1,0 +1,2 @@
+{{ $image := resources.Get (printf "%s" (.Destination | safeURL)) }}
+<img src="{{ $image.RelPermalink }}" alt="{{ .Text }}" {{ with .Title }} title="{{ . }}"{{ end }}>

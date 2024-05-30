@@ -1,0 +1,39 @@
+---
+layout:: "baseof"
+---
+{{ define "main"}}
+<!DOCTYPE html>
+<html lang="{{ or site.Language.LanguageCode site.Language.Lang }}" dir="{{ or site.Language.LanguageDirection `ltr` }}">
+<head>
+<meta charset="utf-8">
+<title>Installing Birthright: The Gorgon's Alliance on Windows 10 - Kiran Welle</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,500,700" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Dancing+Script:200,300,700" rel="stylesheet" type="text/css">
+<link href="styles.css" rel="stylesheet" type="text/css">
+<script src="scripts.js"></script>
+<meta property="og:image" content="img/posts/birthright/cover-title.jpg" />
+<meta property="og:url" content="https://www.kiranwelle.com/birthright" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Installing Birthright: The Gorgon's Alliance on Windows 10" />
+<meta property="og:description" content="Getting Birthright: The Gorgon's Alliance running in Windows 10 is surprisingly easy. Even multiplayer play is possible." />
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-KP9MMSEG8T"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+	
+		gtag('config', 'G-KP9MMSEG8T');
+	</script>
+</head>
+
+	<body onload="createTOC();">
+		<div class="wrapper">
+			test{{ block "page-main" . }}{{ end }}
+		</div>
+{{ partial "footer.html" . }}
+	{{ "<!-- " | safeHTML }} Generated on {{ time.Now | time.Format "Jan 02, 2006" }} at {{ time.Now | time.Format "15:04:05 MST" }}{{ " -->" | safeHTML }}
+	</body>
+</html>
+{{ end }}

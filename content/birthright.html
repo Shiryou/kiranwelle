@@ -1,0 +1,145 @@
+---
+title: "Installing Birthright: The Gorgon's Alliance on Windows 10"
+description: "Getting Birthright: The Gorgon's Alliance running in Windows 10 is surprisingly easy. Even multiplayer play is possible."
+cover_image: img/posts/birthright/cover-title.jpg
+post_url: "https://www.kiranwelle.com/birthright"
+type: page
+show_toc: true
+date: 2020-02-20
+series: ["Rebuilding Birthright: The Gorgon's Alliance"]
+---
+
+<article>
+	<img src="img/posts/birthright/cover-middlebw.jpg">
+	<p>One of the things I find most interesting about desktop support is trying to support legacy hardware and software. Not only does it provide an opportunity to learn more about the history of computing, but it also tends to provide some interesting compatibility challenges.</p>
+	<p>The place where I run into this most often and that I think gets the most words written about it on the Internet is in getting old games running on modern hardware and operating systems.</p>
+	<p>Surprisingly, Windows 10 still supports a wide array of classic 16-bit games that one might expect would never run. That includes the title I'm writing about today: <em>Birthright: The Gorgon's Alliance</em>.</p>
+
+	<div id="toc"></div>
+
+	<h2 id="installing">Installing the game</h2>
+	<p>Getting the game running in Windows 10 is surprisingly easy. You only need a few things to get started:</p>
+
+	<ul>
+		<li>A Birthright: The Gorgon's Alliance CD or an ISO image of the CD.</li>
+		<li><a href="https://www.7-zip.org/download.html" target="_blank">7-zip</a> to extract the game files from the 1.4 patch.</li>
+		<li><a href="http://www.birthright.net/forums/downloads.php?do=file&id=93" target="_blank">Patch 1.4</a> to update the game to the latest version. (Also available from <a href="http://sierrahelp.com/Patches-Updates/Patches-Updates-Games/BirthrightUpdates.html" target="_blank">Sierra Help Pages</a>, referred to as Birthright Windows '95 Update 1.0.4.)</li>
+		<li><a href="http://www.birthright.net/forums/downloads.php?do=file&id=94" target="_blank">Scenario Editor</a> (optional) to mod the game.</li>
+		<li><a href="http://www.birthright.net/forums/downloads.php?do=file&id=91" target="_blank">Character Editor</a> (optional) to mod the game. (Also available from <a href="http://www.sierrahelp.com/Games/BirthrightHelp.html" target="_blank">Sierra Help Pages</a>.)</li>
+		<li><a href="https://github.com/solemnwarning/ipxwrapper/releases" target="_blank">ipxwrapper</a> (optional) for multiplayer.</li>
+	</ul>
+
+	<ol>
+		<img class="list" src="img/posts/birthright/cd.png">
+		<li>Insert the CD into the CD-ROM drive or mount the ISO image of the CD by double-clicking it.</li>
+		<img class="list" src="img/posts/birthright/birthrt.png">
+		<li>Create a folder named BIRTHRT in the root of the C drive.</li>
+		<img class="list" src="img/posts/birthright/copy.png">
+		<li>Copy all the files from the CD to the BIRTHRT folder.</li>
+		<img class="list" src="img/posts/birthright/extract.png">
+		<li>Extract the contents of the patch and, if desired, the Scenario Editor and Character Editor.</li>
+		<img class="list" src="img/posts/birthright/patch.png">
+		<li>patch.exe is an installer file that will not run on Windows 10. Instead, use 7-zip to extract all the files from the executable.</li>
+		<img class="list" src="img/posts/birthright/patch_warn.png">
+		<li>You'll likely see a warning that the file could not be opened as a [PE] archive and was opened as a [zip] archive instead. This is fine and doesn't require any action.</li>
+		<img class="list" src="img/posts/birthright/move.png">
+		<li>Move the resulting files from the last two steps to the BIRTHRT folder.</li>
+		<img class="list" src="img/posts/birthright/logo.png">
+		<li>Double click WINBR.EXE to start the game.</li>
+		<img class="list" src="img/posts/birthright/editors.png">
+		<li>If you included them in the setup, you can also double-click CHARED.EXE or SCENED95.EXE to start the Character Editor or Scenario Editor, respectively.</li>
+	</ol>
+
+	<h2 id="multiplayer">Multiplayer</h2>
+	<p>Since the game is based on a Dungeons &amp; Dragons setting&mdash;a decidedly multiplayer experience&mdash;you might be tempted to think that it is fun to play the game with other people. Unfortunately, I've not been able to find anyone to play with, so I can't confirm. If you would like to try it out for yourself, here is how you can get this working on Windows 10.<p>
+	<p>Birthright's multiplayer component is only available in the Windows version of the game, and not in the DOS version. It also doesn't allow you to play military battles as you would in a single-player game. Instead, it uses quick AI battles. All players will take their turns simultaneously and the NPC domains will get their turns once all players complete their turns.</p>
+	<p>Since Sierra's servers are no longer active, the only option you have available is playing within your Local Area Network. It is theoretically possible to play using a VPN connection, but there have been complaints about excessive lag on simple LAN connections, so this may not be feasible. The lag on LAN caused some issues starting a multiplayer game occasionally, so I suggest saving often in case the players get disconnected.</p>
+
+	<ol>
+		<li>Extract the contents of the latest ipxwrapper release archive into the BIRTHRT folder.</li>
+		<li>Double-click the <code>directplay-win32.reg</code> or <code>directplay-win32.reg</code> file, depending on <a href="https://support.microsoft.com/en-us/office/determine-whether-your-computer-is-running-a-32-bit-version-or-64-bit-version-of-the-windows-operating-system-aac162a1-0cb3-46f2-888f-2f22897396ce" target="_blank">your system architecture</a>.
+		<img class="list" src="img/posts/birthright/multcommon1.png">
+		<li>Run <code>WINBR.EXE</code> and select the <em>Multiplayer</em> option in the main menu.</li>
+		<img class="list" src="img/posts/birthright/multcommon2.png">
+		<li>Select <em>Local Area Network or Modem</em> and click <em>Done</em>.</li>
+		<img class="list" src="img/posts/birthright/multcommon3.png">
+		<li>In the <em>Windows Features</em> dialog that comes up, select <em>Install this feature</em> to install <b>DirectPlay</b>. This window may open in the background behind your game, making it look like your game just froze. It may also take some time to install.</li>
+		<img class="list" src="img/posts/birthright/multcommon4.png">
+		<li>Click the <em>Close</em> button.</li>
+		<img class="list" src="img/posts/birthright/multcommon5.png">
+		<li>In the <em>Windows Security Alert</em> dialog, select which networks the game should be allowed to communicate on and then click <em>Allow Access</em>.<br>
+		This is for the <code>WINBR.EXE</code> executable. You'll see another for Windows' DirectPlay feature later.</li>
+
+		<ol>
+			<p><b>On the host computer:</b></p>
+			<img class="list" src="img/posts/birthright/multhost1.png">
+			<li>On the <em>Multiplayer</em> screen, enter your name, select <em>IPX</em>, and click <em>Create</em>. <b>Note:</b> If IPX is not an option, this means that ipxwrapper was not properly setup.</li>
+			<img class="list" src="img/posts/birthright/multhost2.png">
+			<li>Give the game a meaningful name, select the number of players that will be in the game (including yourself), and click <em>Host</em></li>
+			<img class="list" src="img/posts/birthright/multcommon6.png">
+			<li>In the <em>Windows Security Alert</em> dialog, select which networks the game should be allowed to communicate on and then click <em>Allow Access</em>. This is for Windows' DirectPlay feature. You'll see another for Windows' DirectPlay feature later.</li>
+			<img class="list" src="img/posts/birthright/multhost3.png">
+			<li>Wait for the other players to join the game.</li>
+			<img class="list" src="img/posts/birthright/multhost4.png">
+			<li>When all players have joined, select the game options.</li>
+		</ol>
+
+		<ol>
+			<p><b>On the joining computer(s):</b></p>
+			<img class="list" src="img/posts/birthright/multplayer1.png">
+			<li>On the <em>Multiplayer</em> screen, enter your name, select <em>IPX</em>, and click <em>Join</em>. <b>Note:</b> If IPX is not an option, this means that ipxwrapper was not properly setup.</li>
+			<img class="list" src="img/posts/birthright/multcommon6.png">
+			<li>In the <em>Windows Security Alert</em> dialog, select which networks the game should be allowed to communicate on and then click <em>Allow Access</em>. This is for Windows' DirectPlay feature. You'll see another for Windows' DirectPlay feature later.</li>
+			<img class="list" src="img/posts/birthright/multplayer2.png">
+			<li>The game host should provide you with the name of the game. It may take a few moments for the game to list the available games. Once it appears, select the game and click <em>Join</em></li>
+			<img class="list" src="img/posts/birthright/multplayer3.png">
+			<li>Once all players have joined and the host configures the game settings, you should be presented with the domain selection screen.</li>
+		</ol>
+	</ol>
+
+	<h2 id="learning">History</h2>
+	<p><em>Birthright: The Gorgon's Alliance</em> is a PC game released for both Windows and MS-DOS in 1997.  It was developed by Synergistic Software, a division of Sierra On-Line, who also developed the Hellfire expansion for Blizzard's Diablo the same year.</p>
+	<p>The game is an adaptation of the Birthright campaign setting for the Advanced Dungeons and Dragons line. In the campaign setting, players can become rulers of nations imbued with some of the divine power released when their gods fought a great battle and were destroyed.</p>
+	<p>The PC game is split into three sections, which can be played separately or as part of a larger game. Realm play allows the player to control a nation and the political and economic interests thereof. In Adventure play, the player takes a group of adventurers into dungeons, castles, and dense forests to find items of power or to battle powerful foes. In Battle play, the player can arrange his troops on a real-time battlefield and test his strategy against the computer.</p>
+	<p>Although I can no longer find references to its planned sequels, any hope of more of the Birthright setting in videogame form was lost when the game was not able to please fans.</p>
+
+	<h2 id="modding">Modding the Game</h2>
+	<p>Aside from the Scenario Editor and Character Editor, there are currently no tools for modifying Birthright's assets. Thanks to some digging, by <a href="http://www.birthright.net/">Birthright.net</a> user <a href="http://www.birthright.net/forums/member.php?25142-kasrkraw">kasrkraw</a>, there is <a href="http://www.birthright.net/forums/showthread.php?28766-Modding-Birthright-Gorgon-s-Alliance-Adventures&highlight=modding">some information available</a> on the modified Doom engine that Birthright uses to run its adventures.
+
+	<h2 id="compiling">Compiling the game</h2>
+	<p>In 2018, Al Lowe, the creator of another of my favorite Sierra games (<a href="https://www.mobygames.com/game/torins-passage"><em>Torin's Passage</em></a>), <a href="https://www.pcgamer.com/leisure-suit-larry-creator-al-lowe-is-selling-his-archive-including-sierra-source-code/">sold his archive of old Sierra "junk"</a>. This junk included diskettes containing old Sierra source code. A year later, the code for <em>Birthright: The Gorgon's Alliance</em> appeared <a href="https://archive.org/details/birthrt_source">on the Internet Archive</a>.</p>
+	<p>I have not been able to successfully compile the game yet, but <a href="http://www.birthright.net/forums/showthread.php?28960-Any-tech-savvy-peeps-here-interested-in-the-Birthright-PC-game-source-code&p=92991&viewfull=1#post92991">here are my notes</a> on the process thus far.</p>
+	<p>The necessary libraries and packages are:</p>
+	<ul>
+		<li><a href="http://www.openwatcom.org/download.php">OpenWatcom 1.9</a> - The C++ compiler (including the <code>wmake</code> utility) used to compile the source. Make sure to run <code>setenvironment.bat</code> to add the necessary include files.</li>
+		<li><a href="https://archive.org/details/dxsdk_apr2005">Microsoft DirectX SDK April 2005</a> - The latest version of the DirectX SDK that seems to include <code>dpay.h</code>.</li>
+		<li><a href="https://winworldpc.com/product/windows-sdk-ddk/windows-95-ddk">Windows 95 SDK</a> - This SDK containes some necessary include files.</li>
+	</ul>
+	<p>It's not necessary to install the two SDKs. You can simply extract the include directories and add them to OpenWatcom's <code>INCLUDE</code> environment variable.</p>
+
+	<h2 id="troubleshooting">Troubleshooting</h2>
+	<h6>failed writing initial conditions file</h6>
+	<img class="list" src="img/posts/birthright/initial_cond.png">
+	<p>When I first started testing this setup on a different PC, I ran into an error message after the intro cinematic saying "failed writing initial conditions file". This was caused by the fact that I transferred the files from the CD to my computer using TeraCopy, which marked the files as read-only. To solve this:</p>
+	<ol>
+		<li>Select all the files in the BIRTHRT folder.</li>
+		<li>Right-click the selected files and click <em>Properties</em>.</li>
+		<img class="list" src="img/posts/birthright/read_only.png">
+		<li>Uncheck the <em>Read-only</em> option and click <em>OK</em>.</li>
+		<li>Select <em>Apply changes to the selected items, subfolders and files</em> and click <em>OK</em>.</li>
+	</ol>
+
+	<h6>Please insert your Birthright CD</h6>
+	<img class="list" src="img/posts/birthright/no_cd.png">
+	<p>If you have your CD inserted, but you see the error message "Please insert your Birthright CD. Click Cancel to exit.", it likely means that the drive letter of the CD has changed. To fix this:
+
+	<ol>
+		<img class="list" src="img/posts/birthright/cfg_file.png">
+		<li>Open the file <code>BRSETUP.CFG</code> in any text editor.</li>
+		<li>Change the letter beneath the text <code>[CD]</code> to the drive letter of the CD.</li>
+	</ol>
+	<p>If you have any corrections or helpful tips, please leave them in the comments below.</p>
+</article>
+<div class="commentbox"></div>
+<script src="https://unpkg.com/commentbox.io/dist/commentBox.min.js"></script>
+<script>commentBox('5717237973385216-proj')</script>

@@ -1,0 +1,29 @@
+languageCode = "en-us"
+title = "Kiran Welle"
+relativeURLs = true
+uglyURLs = true
+removePathAccents = true
+theme = "dauerwelle"
+
+[taxonomies]
+category = "categories"
+tag = "tags"
+series = "series"
+
+[permalinks.page]
+    posts = "/posts/:year/:month/:slug/"
+
+[frontmatter]
+    date = [":filename", ":default", ":fileModTime"]
+
+[markup.goldmark.renderer]
+unsafe = true
+
+[markup.goldmark.parser.attribute]
+    block = true
+
+[params]
+    dateFormat = "Jan 2, 2006"
+    dateFormatYearless = "Jan 2"
+    timeFormat = "03:04 PM"
+    dateTimeFormat = "03:04 PM on Jan 2, 2006"
