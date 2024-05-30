@@ -31,12 +31,12 @@ I discovered these on [a previous try at building the source about 3 years ago][
 
 ### Open Watcom 1.9
 
-We'll be using the `MAKE.BAT` command included with the source to leverage the (supposed) wisdom of the developers in building. Running this gives us:
+We'll be using the `MAKE.BAT` command included with the source to leverage the (theoretical) wisdom of the developers in building. Running this gives us:
 
 >     'wmake' is not recognized as an internal or external command, operable program or batch file.
 >     'grep' is not recognized as an internal or external command, operable program or batch file.
 
-So we need `wmake` and `grep`. `wmake` is an easy one. Download and install Open Watcom 1.9. I did a full installation.
+So we need `wmake` and `grep`. `wmake` is an easy one. Download and install Open Watcom 1.9. I did a full installation. `grep` is only used to filter the error log, so we'll replace it with `findstr`.
 
 The installer should offer to modify your system environment variables for you. If it doesn't or you chose to skip that, you'll need to add the binaries to your `PATH` variable and create an `INCLUDE` variable containing the paths to various header files.
 
@@ -62,7 +62,7 @@ Looking at `error.log`, we see
 >       included from main.cpp(73)
 >     (91,10): Error! E059: unable to open 'DPlay.h'
 
-`DPlay.h` is the header file for DirectPlay from old versions of the DirectX SDK. As you can see in [the modern installation instruction][[kw-brinstall], DirectPlay is required to play the game. The best solution for this error is to install the DirectX SDK from April 2005.
+`DPlay.h` is the header file for DirectPlay from old versions of the DirectX SDK. As you can see in [the modern installation instruction][kw-brinstall], DirectPlay is required to play the game. The best solution for this error is to install the DirectX SDK from April 2005.
 
 The installer pretends to install fine, but the files are nowhere to be found. That's fine, because we only really need the header files. These are saved to `%LOCALAPPDATA%\Temp\Include`, so I created `C:\DirectXSDK` and move the files in there. This also gets added to the `INCLUDES` environment variable.
 

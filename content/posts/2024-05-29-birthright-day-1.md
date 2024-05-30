@@ -9,7 +9,7 @@ series: ["Rebuilding Birthright: The Gorgon's Alliance"]
 
 The first day involved mostly figuring out which dependencies were needed where and how to get them installed. You can read about that [here]({{< ref "2024-05-28-birthright.md" >}} "Compiling Birthright: The Gorgon's Alliance").
 
-First, we try `MAKE.BAT dos`
+We're going to take advantage of the developer's (theoretical) wisdom in building their own project and use their `make` command, `MAKE.BAT dos`:
 
 >     Building RELEASE NOVA.EXE for DOS
 >     makefile(795): Error(F46): Illegal character value 1aH in file
