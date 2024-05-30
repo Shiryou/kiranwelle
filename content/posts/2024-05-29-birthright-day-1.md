@@ -9,16 +9,16 @@ series: ["Rebuilding Birthright: The Gorgon's Alliance"]
 
 The first day involved mostly figuring out which dependencies were needed where and how to get them installed. You can read about that [here]({{< ref "2024-05-28-birthright.md" >}} "Compiling Birthright: The Gorgon's Alliance").
 
-Try `MAKE.BAT dos`
+First, we try `MAKE.BAT dos`
 
 >     Building RELEASE NOVA.EXE for DOS
 >     makefile(795): Error(F46): Illegal character value 1aH in file
 >     Error(E02): Make execution terminated
 >     'grep' is not recognized as an internal or external command, operable program or batch file.
 
-Remove last character in Makefile
+There seems to be some corruption in the Makefile. Removing last character in `Makefile` resolves the issue.
 
-Try `MAKE.BAT dos`. Pops up a dialog.
+`MAKE.BAT dos` again, and we get an error dialog:
 
 > Unsupported 16-Bit Application
 > 
@@ -26,14 +26,14 @@ Try `MAKE.BAT dos`. Pops up a dialog.
 
 Closing the dialog kept the script running. I left it for about 15 minutes. In the unlikely event that it wasn't frozen and was just a long process, I let it run while I had dinner with my family. After dinner, I promptly forgot about the project and inadvertently let it run overnight. In the morning, it was still in the same place, so I terminated the script.
 
-### Day 2
-
 >     Building RELEASE NOVA.EXE for DOS
 >     Could Not Find C:\Users\Shiryou\Desktop\Birthrt\dosobjsr\version.obj
 >     Error(E14): Cannot execute (strmake): Exec format error
 >     Error(E42): Last command making (strdat.dat) returned a bad status
 >     Error(E02): Make execution terminated
 >     Terminate batch job (Y/N)? y
+
+### Day 2
 
 Ran `MAKE.BAT WIN95` and just `MAKE.BAT` to test
 
@@ -63,7 +63,7 @@ At this point, `MAKE.BAT DOS` seemed to clear a hurdle, didn't have the popup di
 
 Deleting `DOSOBJSR/strmake.obj` brings the dialog back, and running `MAKE.BAT WIN95` first makes it go away.
 
-The error.log file also had a line asking whether `strdat.dat` should be deleting, which likely led to the pause in the script. Attempting to answer it as it ran didn't seem to work, but deleting both `BIRTHRT\strdata.dat` and `SIERRA\strdata.dat` resolved the problem.
+The `error.log` file also had a line asking whether `strdat.dat` should be deleting, which likely led to the pause in the script. Attempting to answer it as it ran didn't seem to work, but deleting both `BIRTHRT\strdata.dat` and `SIERRA\strdata.dat` resolved the problem.
 
 ---
 
