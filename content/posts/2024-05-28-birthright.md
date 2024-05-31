@@ -20,14 +20,12 @@ These disks included not only the source code for his Leisure Suit Larry games, 
 
 ## Dependencies
 
+As you might expect from video game source code, there are some library dependencies to resolve. I discovered these on [a previous try at building the source about 3 years ago][birghrightnet_previous] that went nowhere.
+
 * [Source and audio files][birthrt_source]
 * [Open Watcom 1.9][openwatcom]
 * [DirectX SDK April 2005][directx_sdk]
 * [Windows 95 DDK][windows95_ddk]
-
-As you might expect from video game source code, there are some library dependencies to resolve. We'll take care of these from the get go.
-
-I discovered these on [a previous try at building the source about 3 years ago][birghrightnet_previous] that went nowhere.
 
 ### Open Watcom 1.9
 
