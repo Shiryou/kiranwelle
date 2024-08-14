@@ -18,16 +18,16 @@ We're going to take advantage of the developer's (theoretical) wisdom in buildin
 
 There seems to be some corruption in the Makefile. Removing last character in `Makefile` resolves the issue.
 
-`MAKE.BAT dos` again, and we get an error dialog:
+Running `MAKE.BAT dos` again, we get an error dialog:
 
-> Unsupported 16-Bit Application
+> **Unsupported 16-Bit Application**
 > 
-> The program or feature "\??\C:\Users\Shiryou\Desktop\Birthrt\strmake.exe" cannot start or run due to incompatibity with 64-bit versions of Windows. Please contact the software vendor to ask if a 64-bit Windows compatible version is available.
+> The program or feature "\??\C:\Birthrt\strmake.exe" cannot start or run due to incompatibity with 64-bit versions of Windows. Please contact the software vendor to ask if a 64-bit Windows compatible version is available.
 
 Closing the dialog kept the script running. I left it for about 15 minutes. In the unlikely event that it wasn't frozen and was just a long process, I let it run while I had dinner with my family. After dinner, I promptly forgot about the project and inadvertently let it run overnight. In the morning, it was still in the same place, so I terminated the script.
 
 >     Building RELEASE NOVA.EXE for DOS
->     Could Not Find C:\Users\Shiryou\Desktop\Birthrt\dosobjsr\version.obj
+>     Could Not Find C:\Birthrt\dosobjsr\version.obj
 >     Error(E14): Cannot execute (strmake): Exec format error
 >     Error(E42): Last command making (strdat.dat) returned a bad status
 >     Error(E02): Make execution terminated
@@ -35,10 +35,10 @@ Closing the dialog kept the script running. I left it for about 15 minutes. In t
 
 ### Day 2
 
-Ran `MAKE.BAT WIN95` and just `MAKE.BAT` to test
+I ran `MAKE.BAT WIN95` and just `MAKE.BAT` to test
 
 >     Building RELEASE NOVA95.EXE for WIN95
->     Could Not Find C:\Users\Shiryou\Desktop\Birthrt\winobjsr\version.obj
+>     Could Not Find C:\Birthrt\winobjsr\version.obj
 >     Error(E42): Last command making (winobjsr\main.obj) returned a bad status
 >     Error(E02): Make execution terminated
 >     'grep' is not recognized as an internal or external command, operable program or batch file.
@@ -48,7 +48,7 @@ Ran `MAKE.BAT WIN95` and just `MAKE.BAT` to test
 >     ERROR: Invalid argument/option - 'Press'.
 >     Type "CHOICE /?" for usage.
 >     Building RELEASE NOVA95.EXE for WIN95
->     Could Not Find C:\Users\Shiryou\Desktop\Birthrt\winobjsr\version.obj
+>     Could Not Find C:\Birthrt\winobjsr\version.obj
 >     Error(E42): Last command making (winobjsr\main.obj) returned a bad status
 >     Error(E02): Make execution terminated
 >     'grep' is not recognized as an internal or external command, operable program or batch file.
@@ -56,7 +56,7 @@ Ran `MAKE.BAT WIN95` and just `MAKE.BAT` to test
 At this point, `MAKE.BAT DOS` seemed to clear a hurdle, didn't have the popup dialog, and returned.
 
 >     Building RELEASE NOVA.EXE for DOS
->     Could Not Find C:\Users\Shiryou\Desktop\Birthrt\dosobjsr\version.obj
+>     Could Not Find C:\Birthrt\dosobjsr\version.obj
 >     Error(E42): Last command making (dosobjsr\main.obj) returned a bad status
 >     Error(E02): Make execution terminated
 >     'grep' is not recognized as an internal or external command, operable program or batch file.
