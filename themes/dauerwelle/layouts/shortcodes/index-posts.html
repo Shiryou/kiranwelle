@@ -1,0 +1,3 @@
+{{ range last 5 ((where .Site.Pages "Type" "posts") | intersect (where .Site.Pages ".Title" "!=" "Posts")) }}
+<p><a class="post-link{{ if .Params.draft }} draft-link{{ end }}" href="{{ .RelPermalink }}">{{ .Title }}</a></p>{{ .Summary }}
+{{ end }}
