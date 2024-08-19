@@ -25,6 +25,9 @@ The initial milestones are listed below:
 
 I've never been very good at C, and I'm relatively new to C#, so this should be a fun adventure.
 
+You can follow the current progress, or download the source code, [on GitHub][brut-github].
+
 [brnet-modding]: http://www.birthright.net/forums/showthread.php?28766-Modding-Birthright-Gorgon-s-Alliance-Adventures
+[brut-github]: https://github.com/Shiryou/brut
 [lzss]: https://en.wikipedia.org/wiki/Lempel%E2%80%93Ziv%E2%80%93Storer%E2%80%93Szymanski
 [wad-editors]: https://doomwiki.org/wiki/Editing_utility#WAD_editors
