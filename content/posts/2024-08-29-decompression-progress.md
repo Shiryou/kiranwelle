@@ -4,7 +4,7 @@ date: 2024-08-29
 series: ["Modding Birthright: The Gorgon's Alliance"]
 ---
 
-I've made far less progress than I was hoping. While part of the delay is just being busy with life, the algorithm isn't really **that** complicated. There are some technical things about assembly language that I've had to relearn, like how the [EFLAGS](https://en.wikipedia.org/wiki/FLAGS_register) register works with bitshifting. (Specifically, the carry flag (CF) is relevant to this algorithm.)
+I've made far less progress than I was hoping. Part of the delay is just being busy with life. The algorithm isn't really **that** complicated. There are some technical things about assembly language that I've had to relearn, like how the [EFLAGS](https://en.wikipedia.org/wiki/FLAGS_register) register works with bitshifting. (Specifically, the carry flag (CF) is relevant to this algorithm.) I also watched [a great lecture](https://www.youtube.com/watch?v=VDXBnmr8AY0) on LZSS to understand the basics of what the algorithm was likely to do.
 
 After going through the algorithm over and over and adjusting little things here and there to ensure everything matches, I realized this morning that I may have made more progress than I realized. The algorithm crashed very early on in the file due to a badly calculated array index that I haven't pinned down yet.
 

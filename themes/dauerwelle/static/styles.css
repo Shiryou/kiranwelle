@@ -326,3 +326,38 @@ pre:has(> code) {
     height: 15px;
     content:"";
 }
+
+.previous-next-post-links {
+    clear: both;
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 1rem;
+}
+
+.previous-next-post-links div {
+    width: 48%;
+}
+
+.previous-next-post-links div:last-child {
+    text-align: right;
+}
+
+.previous-next-post-links .arrow::before, .previous-next-post-links .arrow::after {
+    display:inline-block;
+    text-decoration: none;
+}
+
+.previous-next-post-links .arrow__left::before {
+    content: "\2190";
+    padding-right: .3em;
+}
+
+.previous-next-post-links .arrow__right::after {
+    content: "\2192";
+    padding-left: .3em;
+}
+
+.nav-label {
+    text-align: center;
+    font-weight: bold;
+}
