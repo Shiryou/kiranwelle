@@ -16,5 +16,15 @@
 		</div>
 		<div id="content" class="container">
 			{{ .Content }}
+
+			{{ if .Params.show_toc }}
+			<script>createTOC()</script>
+			{{ end }}
+			{{ if .Params.comments }}
+			<hr>
+			<div class="commentbox"></div>
+			<script src="https://unpkg.com/commentbox.io/dist/commentBox.min.js"></script>
+			<script>commentBox('5717237973385216-proj')</script>
+			{{ end }}
 		</div>
 {{ end }}

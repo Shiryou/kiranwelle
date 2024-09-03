@@ -57,6 +57,9 @@
 		</div>
 		<div id="content" class="container">
 			<article class="container post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+			{{ if .Params.show_toc }}
+				<div id="toc"></div>
+			{{ end }}
 
 
 				{{ $page := . }}
@@ -74,7 +77,17 @@
 				<!-- {{ partial "post-navigation.html" . }} -->
 				<a class="u-url" href="{{ .RelPermalink }}" hidden></a>
 			</article>
-	{{ partial "post-navigation.html" . }}
+			{{ partial "post-navigation.html" . }}
+
+			{{ if .Params.show_toc }}
+			<script>createTOC()</script>
+			{{ end }}
+			{{ if .Params.comments }}
+			<hr>
+			<div class="commentbox"></div>
+			<script src="https://unpkg.com/commentbox.io/dist/commentBox.min.js"></script>
+			<script>commentBox('5717237973385216-proj')</script>
+			{{ end }}
 		</div>
 
 {{ end }}
