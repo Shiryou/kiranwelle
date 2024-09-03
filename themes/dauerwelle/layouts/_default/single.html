@@ -82,7 +82,7 @@
 			{{ if .Params.show_toc }}
 			<script>createTOC()</script>
 			{{ end }}
-			{{ if .Params.comments }}
+			{{ if or (not (isset .Params "comments")) .Params.comments }}
 			<hr>
 			<div class="commentbox"></div>
 			<script src="https://unpkg.com/commentbox.io/dist/commentBox.min.js"></script>
