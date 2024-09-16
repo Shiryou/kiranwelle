@@ -7,7 +7,7 @@ series: ["Modding Birthright: The Gorgon's Alliance"]
 The BRUT project is now nearing feature parity with the original RESUTIL application, which feels fantastic. So far, the changes made by BRUT are identical to those made by RESUTIL on a binary level. The only missing feature is LZSS compression. As the test below demonstrates, overriding resources without LZSS compression is still possible.
 
 <video controls autoplay loop muted>
-  <source src="/img/posts/modding_birthright/birthright-altered-intro.mp4" type="video/mp4">
+  <source src="https://raw.githubusercontent.com/Shiryou/kiranwelle/master/assets/img/posts/modding_birthright/birthright-altered-intro.mp4" type="video/mp4">
 </video>
 
 The video is a little choppy, but that really shouldn't be related to the compression since the game would need to decompress the images to display them anyway. It's more likely a side effect of the screen recording software requiring a lot of CPU cycles. (Note, there's no sound in the video because it wasn't part of what I wanted to demonstrate.)
