@@ -361,3 +361,19 @@ pre:has(> code) {
     text-align: center;
     font-weight: bold;
 }
+
+.post video {
+    display: block;
+    margin: 0.9em auto 0;
+    max-width: 100%;
+    width: 640px;
+}
+
+.post table {
+    margin: 0.9em auto 0;
+    min-width: 80%;
+}
+
+.post table, .post th, .post td {
+    border: 1px solid;
+}
