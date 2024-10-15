@@ -53,7 +53,6 @@ h2 em {
 }
 h4 {
     font-weight: 600;
-    font-size: 1.4em;
 }
 h5, .me h2.blurb {
     font-weight: 500;
@@ -71,9 +70,24 @@ section {
     margin: 5rem 0;
 }
 
+section.now h4 {
+    font-size: 1.4em;
+}
+
 ul, ol {
     margin-left: 50px;
     margin-right: 50px;
+}
+
+dl {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+dd {
+    margin-left: 40px;
 }
 
 #content {
