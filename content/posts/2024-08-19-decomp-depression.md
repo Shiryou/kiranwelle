@@ -1,6 +1,7 @@
 ---
 title: "Decomp-depression"
 date: 2024-08-19
+categories: [Birthright]
 series: ["Modding Birthright: The Gorgon's Alliance"]
 ---
 

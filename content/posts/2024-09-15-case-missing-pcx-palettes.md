@@ -1,6 +1,7 @@
 ---
 title: "The Case of the Missing PCX Palettes"
 date: 2024-09-15
+categories: [Birthright]
 series: ["Modding Birthright: The Gorgon's Alliance"]
 ---
 

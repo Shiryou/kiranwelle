@@ -1,6 +1,7 @@
 ---
 title: "You Know What They Say About Assumptions…"
 date: 2024-09-02
+categories: [Birthright]
 series: ["Modding Birthright: The Gorgon's Alliance"]
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: "A Foray Into Modding Birthright"
 date: 2024-08-06
+categories: [Birthright]
 series: ["Modding Birthright: The Gorgon's Alliance"]
 ---
 

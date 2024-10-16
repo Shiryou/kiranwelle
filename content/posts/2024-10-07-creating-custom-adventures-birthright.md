@@ -1,6 +1,7 @@
 ---
 title: "Creating Custom Adventures for Birthright: The Gorgon's Alliance"
 date: 2024-10-07
+categories: [Birthright]
 series: ["Modding Birthright: The Gorgon's Alliance"]
 ---
 

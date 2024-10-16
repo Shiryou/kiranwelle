@@ -7,6 +7,7 @@ type: page
 show_toc: true
 comments: true
 date: 2024-10-15
+categories: [Birthright]
 ---
 <style>
 table {

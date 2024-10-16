@@ -1,6 +1,7 @@
 ---
 title: "Rebuilding Birthright - Day 1 & 2"
 date: 2024-05-29
+categories: [Birthright]
 series: ["Rebuilding Birthright: The Gorgon's Alliance"]
 ---
 
