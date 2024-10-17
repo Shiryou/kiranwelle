@@ -25,6 +25,6 @@ In the process, I may discover the right configuration for AuroraLib to work pro
 [^1]: The `HashCRC` function hashes the filename to use as an index. It adds a `NULL` byte to the end of the filename because of an index overflow bug. I haven't done thorough testing, so I can only assume it's consistently `NULL`. I'll do more thorough testing later on.
 
 [github-brut]: https://github.com/Shiryou/brut
-[github-brut-hash]:https://github.com/Shiryou/brut/blob/main/ResourceUtilityLib/HashCalculator.cs
+[github-brut-hash]: https://github.com/Shiryou/brut/blob/main/brut-lib/HashCalculator.cs
 [github-auroralib]: https://github.com/Venomalia/AuroraLib.Compression
 [lzss]: https://en.wikipedia.org/wiki/Lempel%E2%80%93Ziv%E2%80%93Storer%E2%80%93Szymanski

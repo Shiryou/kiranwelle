@@ -341,6 +341,13 @@ pre:has(> code) {
     content:"";
 }
 
+article .post_notice {
+    width: fit-content;
+    margin: 15px auto;
+    padding: 15px;
+    border: 3px dotted purple;
+}
+
 .previous-next-post-links {
     clear: both;
     display: flex;

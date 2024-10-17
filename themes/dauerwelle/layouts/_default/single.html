@@ -29,7 +29,7 @@
 				{{ if .Params.Author }}
 					• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ .Params.Author }}</span></span>
 				{{ end }}
-				<ul class="post-categories">
+				<!--<ul class="post-categories">
 					{{ range sort (.GetTerms "categories") "Title" "asc" }}
 					<li><a href="{{ .RelPermalink }}">{{- .LinkTitle -}}</a></li>
 					{{ end }}
@@ -38,7 +38,7 @@
 					{{ range sort (.GetTerms "tags") "Title" "asc" }}
 					<li><a href="{{ .RelPermalink }}">{{- .LinkTitle -}}</a></li>
 					{{ end }}
-				</ul>
+				</ul>-->
 				{{ if gt ((.GetTerms "people") | len) 0 }}
 				<div>
 					People mentioned:
@@ -57,9 +57,13 @@
 		</div>
 		<div id="content" class="container">
 			<article class="container post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
-			{{ if .Params.show_toc }}
-				<div id="toc"></div>
-			{{ end }}
+                {{ range $notice := .Params.notices }}
+                <div class="post_notice">⚠️ {{ $notice | safeHTML }}</div>
+                {{ end }}
+
+                {{ if .Params.show_toc }}
+                    <div id="toc"></div>
+                {{ end }}
 
 
 				{{ $page := . }}

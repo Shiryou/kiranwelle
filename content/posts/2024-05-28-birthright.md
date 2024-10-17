@@ -3,6 +3,8 @@ title: "Rebuilding Birthright: The Gorgon's Alliance"
 date: 2024-05-28
 categories: [Birthright]
 series: ["Rebuilding Birthright: The Gorgon's Alliance"]
+notices:
+  - "Archive.org is experiencing <a href='https://mastodon.archive.org/@internetarchive'>an outage</a>. Some links may be temporarily broken."
 ---
 
 ## What?

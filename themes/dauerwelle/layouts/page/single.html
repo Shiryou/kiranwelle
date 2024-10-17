@@ -15,6 +15,10 @@
 			{{ end }}
 		</div>
 		<div id="content" class="container">
+			<article>
+			{{ range $notice := .Params.notices }}
+			<div class="post_notice">⚠️ {{ $notice | safeHTML }}</div>
+			{{ end }}
 			{{ .Content }}
 
 			{{ if .Params.show_toc }}
@@ -26,5 +30,6 @@
 			<script src="https://unpkg.com/commentbox.io/dist/commentBox.min.js"></script>
 			<script>commentBox('5717237973385216-proj')</script>
 			{{ end }}
+			</article>
 		</div>
 {{ end }}

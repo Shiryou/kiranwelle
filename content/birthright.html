@@ -8,11 +8,13 @@ show_toc: true
 comments: true
 date: 2020-02-20
 categories: [Birthright]
-series: ["Rebuilding Birthright: The Gorgon's Alliance"]
+series: ["Birthright: The Gorgon's Alliance Support"]
+notices: 
+  - "Archive.org is experiencing <a href='https://mastodon.archive.org/@internetarchive'>an outage</a>. Some links may be temporarily broken."
 ---
 
 <article>
-	<img src="img/posts/birthright/cover-middlebw.jpg">
+	<img src="{{< relref "/" >}}img/posts/birthright/cover-middlebw.jpg">
 	<p>One of the things I find most interesting about desktop support is trying to support legacy hardware and software. Not only does it provide an opportunity to learn more about the history of computing, but it also tends to provide some interesting compatibility challenges.</p>
 	<p>The place where I run into this most often and that I think gets the most words written about it on the Internet is in getting old games running on modern hardware and operating systems.</p>
 	<p>Surprisingly, Windows 10 still supports a wide array of classic 16-bit games that one might expect would never run. That includes the title I'm writing about today: <em>Birthright: The Gorgon's Alliance</em>.</p>
@@ -32,23 +34,23 @@ series: ["Rebuilding Birthright: The Gorgon's Alliance"]
 	</ul>
 
 	<ol>
-		<img class="list" src="img/posts/birthright/cd.png">
+		<img class="list" src="{{< relref "/" >}}img/posts/birthright/cd.png">
 		<li>Insert the CD into the CD-ROM drive or mount the ISO image of the CD by double-clicking it.</li>
-		<img class="list" src="img/posts/birthright/birthrt.png">
+		<img class="list" src="{{< relref "/" >}}img/posts/birthright/birthrt.png">
 		<li>Create a folder named BIRTHRT in the root of the C drive.</li>
-		<img class="list" src="img/posts/birthright/copy.png">
+		<img class="list" src="{{< relref "/" >}}img/posts/birthright/copy.png">
 		<li>Copy all the files from the CD to the BIRTHRT folder.</li>
-		<img class="list" src="img/posts/birthright/extract.png">
+		<img class="list" src="{{< relref "/" >}}img/posts/birthright/extract.png">
 		<li>Extract the contents of the patch and, if desired, the Scenario Editor and Character Editor.</li>
-		<img class="list" src="img/posts/birthright/patch.png">
+		<img class="list" src="{{< relref "/" >}}img/posts/birthright/patch.png">
 		<li>patch.exe is an installer file that will not run on Windows 10. Instead, use 7-zip to extract all the files from the executable.</li>
-		<img class="list" src="img/posts/birthright/patch_warn.png">
+		<img class="list" src="{{< relref "/" >}}img/posts/birthright/patch_warn.png">
 		<li>You'll likely see a warning that the file could not be opened as a [PE] archive and was opened as a [zip] archive instead. This is fine and doesn't require any action.</li>
-		<img class="list" src="img/posts/birthright/move.png">
+		<img class="list" src="{{< relref "/" >}}img/posts/birthright/move.png">
 		<li>Move the resulting files from the last two steps to the BIRTHRT folder.</li>
-		<img class="list" src="img/posts/birthright/logo.png">
+		<img class="list" src="{{< relref "/" >}}img/posts/birthright/logo.png">
 		<li>Double click WINBR.EXE to start the game.</li>
-		<img class="list" src="img/posts/birthright/editors.png">
+		<img class="list" src="{{< relref "/" >}}img/posts/birthright/editors.png">
 		<li>If you included them in the setup, you can also double-click CHARED.EXE or SCENED95.EXE to start the Character Editor or Scenario Editor, respectively.</li>
 	</ol>
 
@@ -60,41 +62,41 @@ series: ["Rebuilding Birthright: The Gorgon's Alliance"]
 	<ol>
 		<li>Extract the contents of the latest ipxwrapper release archive into the BIRTHRT folder.</li>
 		<li>Double-click the <code>directplay-win32.reg</code> or <code>directplay-win32.reg</code> file, depending on <a href="https://support.microsoft.com/en-us/office/determine-whether-your-computer-is-running-a-32-bit-version-or-64-bit-version-of-the-windows-operating-system-aac162a1-0cb3-46f2-888f-2f22897396ce" target="_blank">your system architecture</a>.
-		<img class="list" src="img/posts/birthright/multcommon1.png">
+		<img class="list" src="{{< relref "/" >}}img/posts/birthright/multcommon1.png">
 		<li>Run <code>WINBR.EXE</code> and select the <em>Multiplayer</em> option in the main menu.</li>
-		<img class="list" src="img/posts/birthright/multcommon2.png">
+		<img class="list" src="{{< relref "/" >}}img/posts/birthright/multcommon2.png">
 		<li>Select <em>Local Area Network or Modem</em> and click <em>Done</em>.</li>
-		<img class="list" src="img/posts/birthright/multcommon3.png">
+		<img class="list" src="{{< relref "/" >}}img/posts/birthright/multcommon3.png">
 		<li>In the <em>Windows Features</em> dialog that comes up, select <em>Install this feature</em> to install <b>DirectPlay</b>. This window may open in the background behind your game, making it look like your game just froze. It may also take some time to install.</li>
-		<img class="list" src="img/posts/birthright/multcommon4.png">
+		<img class="list" src="{{< relref "/" >}}img/posts/birthright/multcommon4.png">
 		<li>Click the <em>Close</em> button.</li>
-		<img class="list" src="img/posts/birthright/multcommon5.png">
+		<img class="list" src="{{< relref "/" >}}img/posts/birthright/multcommon5.png">
 		<li>In the <em>Windows Security Alert</em> dialog, select which networks the game should be allowed to communicate on and then click <em>Allow Access</em>.<br>
 		This is for the <code>WINBR.EXE</code> executable. You'll see another for Windows' DirectPlay feature later.</li>
 
 		<ol>
 			<p><b>On the host computer:</b></p>
-			<img class="list" src="img/posts/birthright/multhost1.png">
+			<img class="list" src="{{< relref "/" >}}img/posts/birthright/multhost1.png">
 			<li>On the <em>Multiplayer</em> screen, enter your name, select <em>IPX</em>, and click <em>Create</em>. <b>Note:</b> If IPX is not an option, this means that ipxwrapper was not properly setup.</li>
-			<img class="list" src="img/posts/birthright/multhost2.png">
+			<img class="list" src="{{< relref "/" >}}img/posts/birthright/multhost2.png">
 			<li>Give the game a meaningful name, select the number of players that will be in the game (including yourself), and click <em>Host</em></li>
-			<img class="list" src="img/posts/birthright/multcommon6.png">
+			<img class="list" src="{{< relref "/" >}}img/posts/birthright/multcommon6.png">
 			<li>In the <em>Windows Security Alert</em> dialog, select which networks the game should be allowed to communicate on and then click <em>Allow Access</em>. This is for Windows' DirectPlay feature. You'll see another for Windows' DirectPlay feature later.</li>
-			<img class="list" src="img/posts/birthright/multhost3.png">
+			<img class="list" src="{{< relref "/" >}}img/posts/birthright/multhost3.png">
 			<li>Wait for the other players to join the game.</li>
-			<img class="list" src="img/posts/birthright/multhost4.png">
+			<img class="list" src="{{< relref "/" >}}img/posts/birthright/multhost4.png">
 			<li>When all players have joined, select the game options.</li>
 		</ol>
 
 		<ol>
 			<p><b>On the joining computer(s):</b></p>
-			<img class="list" src="img/posts/birthright/multplayer1.png">
+			<img class="list" src="{{< relref "/" >}}img/posts/birthright/multplayer1.png">
 			<li>On the <em>Multiplayer</em> screen, enter your name, select <em>IPX</em>, and click <em>Join</em>. <b>Note:</b> If IPX is not an option, this means that ipxwrapper was not properly setup.</li>
-			<img class="list" src="img/posts/birthright/multcommon6.png">
+			<img class="list" src="{{< relref "/" >}}img/posts/birthright/multcommon6.png">
 			<li>In the <em>Windows Security Alert</em> dialog, select which networks the game should be allowed to communicate on and then click <em>Allow Access</em>. This is for Windows' DirectPlay feature. You'll see another for Windows' DirectPlay feature later.</li>
-			<img class="list" src="img/posts/birthright/multplayer2.png">
+			<img class="list" src="{{< relref "/" >}}img/posts/birthright/multplayer2.png">
 			<li>The game host should provide you with the name of the game. It may take a few moments for the game to list the available games. Once it appears, select the game and click <em>Join</em></li>
-			<img class="list" src="img/posts/birthright/multplayer3.png">
+			<img class="list" src="{{< relref "/" >}}img/posts/birthright/multplayer3.png">
 			<li>Once all players have joined and the host configures the game settings, you should be presented with the domain selection screen.</li>
 		</ol>
 	</ol>
@@ -117,7 +119,7 @@ series: ["Rebuilding Birthright: The Gorgon's Alliance"]
 	<p>I have not been able to successfully compile the game yet, but <a href="http://www.birthright.net/forums/showthread.php?28960-Any-tech-savvy-peeps-here-interested-in-the-Birthright-PC-game-source-code&p=92991&viewfull=1#post92991">here are my notes</a> on the process thus far.</p>
 	<p>The necessary libraries and packages are:</p>
 	<ul>
-		<li><a href="http://www.openwatcom.org/download.php">OpenWatcom 1.9</a> - The C++ compiler (including the <code>wmake</code> utility) used to compile the source. Make sure to run <code>setenvironment.bat</code> to add the necessary include files.</li>
+		<li><a href="http://openwatcom.org/ftp/install/">OpenWatcom 1.9</a> - The C++ compiler (including the <code>wmake</code> utility) used to compile the source. Make sure to run <code>setenvironment.bat</code> to add the necessary include files.</li>
 		<li><a href="https://archive.org/details/dxsdk_apr2005">Microsoft DirectX SDK April 2005</a> - The latest version of the DirectX SDK that seems to include <code>dpay.h</code>.</li>
 		<li><a href="https://winworldpc.com/product/windows-sdk-ddk/windows-95-ddk">Windows 95 SDK</a> - This SDK containes some necessary include files.</li>
 	</ul>
@@ -125,22 +127,22 @@ series: ["Rebuilding Birthright: The Gorgon's Alliance"]
 
 	<h2 id="troubleshooting">Troubleshooting</h2>
 	<h6>failed writing initial conditions file</h6>
-	<img class="list" src="img/posts/birthright/initial_cond.png">
+	<img class="list" src="{{< relref "/" >}}img/posts/birthright/initial_cond.png">
 	<p>When I first started testing this setup on a different PC, I ran into an error message after the intro cinematic saying "failed writing initial conditions file". This was caused by the fact that I transferred the files from the CD to my computer using TeraCopy, which marked the files as read-only. To solve this:</p>
 	<ol>
 		<li>Select all the files in the BIRTHRT folder.</li>
 		<li>Right-click the selected files and click <em>Properties</em>.</li>
-		<img class="list" src="img/posts/birthright/read_only.png">
+		<img class="list" src="{{< relref "/" >}}img/posts/birthright/read_only.png">
 		<li>Uncheck the <em>Read-only</em> option and click <em>OK</em>.</li>
 		<li>Select <em>Apply changes to the selected items, subfolders and files</em> and click <em>OK</em>.</li>
 	</ol>
 
 	<h6>Please insert your Birthright CD</h6>
-	<img class="list" src="img/posts/birthright/no_cd.png">
+	<img class="list" src="{{< relref "/" >}}img/posts/birthright/no_cd.png">
 	<p>If you have your CD inserted, but you see the error message "Please insert your Birthright CD. Click Cancel to exit.", it likely means that the drive letter of the CD has changed. To fix this:
 
 	<ol>
-		<img class="list" src="img/posts/birthright/cfg_file.png">
+		<img class="list" src="{{< relref "/" >}}img/posts/birthright/cfg_file.png">
 		<li>Open the file <code>BRSETUP.CFG</code> in any text editor.</li>
 		<li>Change the letter beneath the text <code>[CD]</code> to the drive letter of the CD.</li>
 	</ol>

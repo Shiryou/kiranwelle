@@ -30,7 +30,7 @@ layout:: "baseof"
 
 	<body onload="createTOC();">
 		<div class="wrapper">
-			test{{ block "page-main" . }}{{ end }}
+			{{ block "page-main" . }}{{ end }}
 		</div>
 {{ partial "footer.html" . }}
 	{{ "<!-- " | safeHTML }} Generated on {{ time.Now | time.Format "Jan 02, 2006" }} at {{ time.Now | time.Format "15:04:05 MST" }} with Hugo {{ .Site.Hugo.Version }}.{{ " -->" | safeHTML }}
