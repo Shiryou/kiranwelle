@@ -61,10 +61,9 @@ There are several options for building Doom levels. My testing has mostly been d
 To duplicate my setup, install Slade 3 and unzip ZenNode to a permanent place. Then, follow these steps:
 
 1. Open SLADE.
-2. Ignore these steps for now. I'm still working on the feature in BRUT that will build *Birthright.wad*.
-    1. Click *Edit* &rarr; *Set Base Resource Archive*.
-    2. Click the *Add Archive* button.
-    3. Find and open *Birthright.wad*, then click *OK*.
+2. Click *Edit* &rarr; *Set Base Resource Archive*.
+3. Click the *Add Archive* button.
+4. Find and open [*BIRTHRT.WAD*][anchor-birthrt-wad], then click *OK*.
 5. Click *Edit* &rarr; *Preferences…*.
 6. Expand *Map Editor*, then select *Node Builder*.
 7. Set the *Node Builder:* field to *ZenNode*.
@@ -87,6 +86,16 @@ If you use [Ultimate Doom Builder](https://ultimatedoombuilder.github.io/), you 
 5. Enter `w %F` into the *Parameters* field and check the checkbox for *Use short paths and file names (MSDOS 8.3 format)*.
 
 SLADE unfortunately uses path variables with quotes and Linux-style path separaters, which Birthright doesn't understand.
+
+## Playing Birthright maps in GZDoom
+
+You can play Birthright levels in [GZDoom][gzdoom] by loading the WAD file along with [BIRTHRT.WAD][anchor-birthrt-wad].
+
+    gzdoom.exe -iwad DOOM.WAD -file C:\path\to\BIRTHRT.WAD C:\BIRTHRT\WADS\ENDIE_MW.WAD
+
+## Obtaining BIRTHRT.WAD
+
+: *This section is currently a placeholder. There are a few development tasks that must be implemented in BRUT before these steps can be completed.*
 
 ## Format documentation: Adventure maps (`.WAD`)
 The WAD file format (Birthright uses vanilla PWADs) was created to store game data for Doom and the Doom family of games. It is a well defined file type. Please review the format information on [DoomWiki][doomwiki-wad].
@@ -949,9 +958,11 @@ Each Thing has an ID number, which is used to all things related to it. (Art, de
 </span>
 </article>
 
+[anchor-birthrt-wad]: #obtaining-birthrtwad
 [anchor-environment]: #setting-up-a-development-environment
 [anchor-scene]: #format-documentation-scenes-scn
 [anchor-thing-reference]: #thing-reference
 [anchor-wad]: #format-documentation-adventure-maps-wad
 [doomwiki-wad]: https://doomwiki.org/wiki/WAD
 [github-brut]: https://github.com/Shiryou/brut
+[gzdoom]: https://zdoom.org/downloads
