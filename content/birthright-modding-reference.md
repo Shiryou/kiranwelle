@@ -118,20 +118,22 @@ Keywords are variable names written using Pascal casing (ex: `QuestThingType`). 
 
 #### Optional keywords
 * **Type:**
+    * **0:** The default. A game adventure.
     * **1:** A custom adventure.
 * **Music:**
 * **Demo:**
 * **Panorama:**
-* **QuestThingType:** The [Thing ID][anchor-thing-reference] of the item that will complete the quest. This must come before `[Wad]`.
 * **Wad:** The [WAD file][anchor-wad] to load. Only one WAD file can be loaded per scene.
+* **Difficulty:** The difficulty of the adventure in a range of 1 to 4.
 * **Exit:** A list of exit line IDs and the scene to move to. This is used to link different WADs together. Each WAD needs a corresponding scene file.
 * **Pallet:** The PCX palette to use to load textures.
 
-#### Mod-heavy keywords
-These keywords can be used in custom adventures, but require making modifications to more game assets. This would be useful for total conversions where the resource files are already being replaced.
+#### Unusuable keywords
+These keywords can not be used in custom adventures. Some would require making modifications to more game assets if overriding a game adventure. This would be useful for total conversions where the resource files are already being replaced.
 
-* **Notes:** Notes are scrolls in an adventure that can be opened to read a message inside. These reference messages found in `STRDAT.DAT`.
-* **OpeningDialog:** This opens a dialog at the start of the adventure with the indicated message found in `STRDAT.DAT`.
+* **QuestThingType:** The [Thing ID][anchor-thing-reference] of the item that will complete the quest. This must come before `[Wad]`. Not usable in custom adventures.
+* **Notes:** Notes are scrolls in an adventure that can be opened to read a message inside. These reference messages found in `STRDAT.DAT`. Not usable in custom adventures.
+* **OpeningDialog:** This opens a dialog at the start of the adventure with the indicated message found in `STRDAT.DAT`. Not usable in custom adventures.
 
 ## Format documentation: Descriptions (`.TXT`, `.ADV`)
 
@@ -189,6 +191,151 @@ Each file is then stored as follows:
 | file_offset + 27 | \* | The content of the file |
 
 The original `RESUTIL` used to create the resource files allowed adding the same file multiple times, appending it each time. Retrieving the file would only reference the first instance.
+
+## Doom specials reference
+
+Doom's linedefs and sectors allow setting special attributes, which allow extra functionality like doors, movable floors, teleports, and keys. See them listed below:
+
+### Doors
+
+| Special | ID |
+|---------|----|
+| Door, Doom, Manula, Slow | 1 |
+| Door, Doom, Walkover, Slow | 4 |
+| Door, Doom, Walkover, Fast | 5 |
+| Swinging Door, Hinges on Left | 26 |
+| Swinging Door, Hinges on Right | 27 |
+| Door, Doom, Switch-activated, Slow | 29 |
+| Door, Doom, Switch-activated, Fast | 30 |
+| Door, Doom, Manual, Fast | 118 |
+
+### Keyed Doors
+
+| Special | ID |
+|---------|----|
+| Door Silver Key | 60 |
+| Door Gold Key | 61 |
+| Door Red Key | 62 |
+| Door Blue Key | 63 |
+| Door Green Key | 64 |
+| Door White Key | 65 |
+| Door Skeleton Key | 66 |
+| Door Black Key | 67 |
+| Door Bone Key | 68 |
+| Door Stone Key | 69 |
+| Left-Swinging Door Silver Key | 70 |
+| Left-Swinging Door Gold Key | 71 |
+| Left-Swinging Door Red Ruby Key | 72 |
+| Left-Swinging Door Blue Sapphire Key | 73 |
+| Left-Swinging Door Green Emerald Key | 74 |
+| Left-Swinging Door White Diamond Key | 75 |
+| Left-Swinging Door Skeleton Key | 76 |
+| Left-Swinging Door Black Key | 77 |
+| Left-Swinging Door Bone Key | 78 |
+| Left-Swinging Door Stone Key | 79 |
+| Right-Swinging Door Silver Key | 80 |
+| Right-Swinging Door Gold Key | 81 |
+| Right-Swinging Door Red Ruby Key | 82 |
+| Right-Swinging Door Blue Sapphire Key | 83 |
+| Right-Swinging Door Green Emerald Key | 84 |
+| Right-Swinging Door White Diamond Key | 85 |
+| Right-Swinging Door Skeleton Key | 86 |
+| Right-Swinging Door Black Key | 87 |
+| Right-Swinging Door Bone Key | 88 |
+| Right-Swinging Door Stone Key | 89 |
+| Door Blue Gem | 120 |
+| Door Green Gem | 121 |
+| Door Gem of Passage | 122 |
+| Left-Swinging Door Blue Gem | 130 |
+| Left-Swinging Door Green Gem | 131 |
+| Left-Swinging Door Gem of Passage | 132 |
+| Right-Swinging Door Blue Gem | 140 |
+| Right-Swinging Door Green Gem | 141 |
+| Right-Swinging Door Gem of Passage | 142 |
+| Inaccessible Door | 150 |
+
+<blockquote>"Walkover-activated and switch-activated doors did not used to have anything special about their line segments.  Their sectors had the same tag as the distant line segment that activated the door, but their line segments had special = 0.  That meant the lines did not get put into the global variable "first_seg," and so activate_seg did nothing when you stood in front of them and pressed the spacebar. SO: for a walkover-activated or switch-activated door, set up the walkover or switch as before and also give the lines on both sides of the door one of the following special values."</blockquote>
+
+| Special | ID |
+|---------|----|
+| Informational Message (Walkover) | 151 |
+| Informational Message (Switch) | 152 |
+
+### Non-door portals
+
+| Special | ID |
+|---------|----|
+| Teleport, 1-way line activation | 39 |
+| Teleport, 2-way line activation LSP_TELE_2WAY | 97 |
+| Exit Level, 1-way line activation | 11 |
+| Exit Level, 2-way line activation | 52 |
+
+### Miscellaneous
+
+| Special | ID |
+|---------|----|
+| Ceiling Crusher, Walkover, 1-time only | 6 |
+| Ceiling Crusher, Walkover, repeatable | 7 |
+| Ceiling Crusher, Switch, 1-time only | 8 |
+| Ceiling Crusher, Switch, repeatable | 9 |
+| Lift, Walkover, goes DOWN to lowest adjacent floor INCLUDING itself | 10 |
+| Lift, Walkover, goes UP to lowest adjacent floor HIGHER than itself | 12 |
+| Lift, Switch, goes down to lowest adjacent floor including itself | 13 |
+| Lift, Switch, goes up to lowest adjacent floor including itself | 14 |
+| like #10 but continuous (walkover) | 15 |
+| like #12 but continuous (walkover) | 16 |
+| like #10 but continuous (switch) | 17 |
+| like #12 but continuous (switch) | 18 |
+| Pit Trap, Walkover | 38 |
+| Pit Trap, Switch | 40 |
+| Reverse Pit Trap, Walkover | 41 |
+| Reverse Pit Trap, Switch | 42 |
+| Floor Crusher, Walkover, 1-time only | 56 |
+| Floor Crusher, Walkover, repeatable | 57 |
+| Floor Crusher, Switch, 1-time only | 58 |
+| Floor Crusher, Switch, repeatable | 59 |
+
+### Dialog trip lines
+
+| Dialog Trip Line 1 | 201 |
+| Dialog Trip Line 2 | 202 |
+| Dialog Trip Line 3 | 203 |
+| Dialog Trip Line 4 | 204 |
+| Dialog Trip Line 5 | 205 |
+| Dialog Trip Line 6 | 206 |
+| Dialog Trip Line 7 | 207 |
+| Dialog Trip Line 8 | 208 |
+| Dialog Trip Line 9 | 209 |
+| Dialog Trip Line 10 | 210 |
+| Dialog Trip Line 11 | 211 |
+| Dialog Trip Line 12 | 212 |
+| Dialog Trip Line 13 | 213 |
+| Dialog Trip Line 14 | 214 |
+| Dialog Trip Line 15 | 215 |
+| Dialog Trip Line 16 | 216 |
+| Dialog Trip Line 17 | 217 |
+| Dialog Trip Line 18 | 218 |
+| Dialog Trip Line 19 | 219 |
+| Dialog Trip Line 20 | 220 |
+
+### Sector specials
+
+| Special | ID |
+|---------|----|
+| Nothing special | 0 |
+| Lightning flashes | 2 |
+| Blinking light | 3 |
+| Damage of 2 | 5 |
+| Damage of 5 | 7 |
+| Damage of 10 | 9 |
+| Sector allows climbing | 16 |
+| Water | 60 |
+| Deep Water | 61 |
+| Lava | 62 |
+| Mountain | 63 |
+| Forest | 64 |
+| Poison Gas | 65 |
+| Acid Floor | 66 |
 
 ## Thing reference
 Each Thing has an ID number, which is used to all things related to it. (Art, descriptions, etc.) Troops are presumably used in the battle maps. They don't seem to appear when used in adventures.
