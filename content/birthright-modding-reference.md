@@ -194,20 +194,13 @@ The original `RESUTIL` used to create the resource files allowed adding the same
 
 ## Doom specials reference
 
-Doom's linedefs and sectors allow setting special attributes, which allow extra functionality like doors, movable floors, teleports, and keys. See them listed below:
+Doom's linedefs and sectors allow setting special attributes, which allow extra functionality like doors, movable floors, teleports, and keys.
 
-### Doors
+*Note from the developers regarding the "Informational message" specials:*
+<blockquote>"Walkover-activated and switch-activated doors did not used to have anything special about their line segments.  Their sectors had the same tag as the distant line segment that activated the door, but their line segments had special = 0.  That meant the lines did not get put into the global variable "first_seg," and so activate_seg did nothing when you stood in front of them and pressed the spacebar. SO: for a walkover-activated or switch-activated door, set up the walkover or switch as before and also give the lines on both sides of the door one of the following special values."</blockquote>
 
-| Special | ID |
-|---------|----|
-| Door, Doom, Manula, Slow | 1 |
-| Door, Doom, Walkover, Slow | 4 |
-| Door, Doom, Walkover, Fast | 5 |
-| Swinging Door, Hinges on Left | 26 |
-| Swinging Door, Hinges on Right | 27 |
-| Door, Doom, Switch-activated, Slow | 29 |
-| Door, Doom, Switch-activated, Fast | 30 |
-| Door, Doom, Manual, Fast | 118 |
+<span class="reference-container">
+<span class="reference-table">
 
 ### Keyed Doors
 
@@ -254,10 +247,21 @@ Doom's linedefs and sectors allow setting special attributes, which allow extra 
 | Right-Swinging Door Gem of Passage | 142 |
 | Inaccessible Door | 150 |
 
-<blockquote>"Walkover-activated and switch-activated doors did not used to have anything special about their line segments.  Their sectors had the same tag as the distant line segment that activated the door, but their line segments had special = 0.  That meant the lines did not get put into the global variable "first_seg," and so activate_seg did nothing when you stood in front of them and pressed the spacebar. SO: for a walkover-activated or switch-activated door, set up the walkover or switch as before and also give the lines on both sides of the door one of the following special values."</blockquote>
+</span>
+<span class="reference-table">
+
+### Doors
 
 | Special | ID |
 |---------|----|
+| Door, Doom, Manula, Slow | 1 |
+| Door, Doom, Walkover, Slow | 4 |
+| Door, Doom, Walkover, Fast | 5 |
+| Swinging Door, Hinges on Left | 26 |
+| Swinging Door, Hinges on Right | 27 |
+| Door, Doom, Switch-activated, Slow | 29 |
+| Door, Doom, Switch-activated, Fast | 30 |
+| Door, Doom, Manual, Fast | 118 |
 | Informational Message (Walkover) | 151 |
 | Informational Message (Switch) | 152 |
 
@@ -295,8 +299,13 @@ Doom's linedefs and sectors allow setting special attributes, which allow extra 
 | Floor Crusher, Switch, 1-time only | 58 |
 | Floor Crusher, Switch, repeatable | 59 |
 
+</span>
+<span class="reference-table">
+
 ### Dialog trip lines
 
+| Special | ID |
+|---------|----|
 | Dialog Trip Line 1 | 201 |
 | Dialog Trip Line 2 | 202 |
 | Dialog Trip Line 3 | 203 |
@@ -336,6 +345,9 @@ Doom's linedefs and sectors allow setting special attributes, which allow extra 
 | Forest | 64 |
 | Poison Gas | 65 |
 | Acid Floor | 66 |
+
+</span>
+</span>
 
 ## Thing reference
 Each Thing has an ID number, which is used to all things related to it. (Art, descriptions, etc.) Troops are presumably used in the battle maps. They don't seem to appear when used in adventures.
