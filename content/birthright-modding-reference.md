@@ -94,7 +94,7 @@ You can play Birthright levels in [GZDoom][gzdoom] by loading the WAD file along
     gzdoom.exe -iwad DOOM.WAD -file C:\path\to\BIRTHRT.WAD C:\BIRTHRT\WADS\ENDIE_MW.WAD
 
 ## Obtaining BIRTHRT.WAD
-
+&nbsp;
 : *This section is currently a placeholder. There are a few development tasks that must be implemented in BRUT before these steps can be completed.*
 
 ## Format documentation: Adventure maps (`.WAD`)
@@ -107,35 +107,76 @@ Scene files use a format that resembles [INI files](https://en.wikipedia.org/wik
 
 Scene files appear to be the entry point into Dynamix's Nova engine. They are used for adventures and battles. `SCENES\TEMPLATE.SCN` contains developer documentation on the scene file format, but it is unclear how up to date this documentation is. For this reason, there are keywords mentioned in that file that are not referenced here.
 
-### Comments
-Comments must be placed on an empty line, starting with the number sign (`#`). If a scene file is edited using the scene editor (`SCENED`), all comments are lost.
+Comments must be placed on an empty line, starting with the number sign (`#`). If a scene file is edited using the scene editor (`SCENED`), all comments are lost. Keywords are variable names written using Pascal casing (ex: `QuestThingType`). These are used by Nova to initialize adventures.
 
-### Keywords
-Keywords are variable names written using Pascal casing (ex: `QuestThingType`). These are used by Nova to initialize adventures.
+### Required keywords
+`Version`
+: Always 1.0
 
-#### Required keywords
-* **Version:** Always 1.0
+### Optional keywords
+`Type`
+:     * `0`: The default. A game adventure.
+      * `1`: A custom adventure.
 
-#### Optional keywords
-* **Type:**
-    * **0:** The default. A game adventure.
-    * **1:** A custom adventure.
-* **Music:**
-* **Demo:**
-* **Panorama:**
-* **Wad:** The [WAD file][anchor-wad] to load. Only one WAD file can be loaded per scene.
-* **Difficulty:** The difficulty of the adventure in a range of 1 to 4.
-* **Exit:** A list of exit line IDs and the scene to move to. This is used to link different WADs together. Each WAD needs a corresponding scene file.
-* **Pallet:** The PCX palette to use to load textures.
+`Music`  
+`Demo`  
+`Panorama`  
+`Wad`
+: The [WAD file][anchor-wad] to load. Only one WAD file can be loaded per scene.
 
-#### Unusuable keywords
+`Difficulty`
+: The difficulty of the adventure in a range of 1 to 4.
+
+`Exit`
+: A list of exit line IDs and the scene to move to. This is used to link different WADs together. Each WAD needs a corresponding scene file.
+
+`Pallet`
+: The PCX palette to use to load textures.
+
+### Unusuable keywords
 These keywords can not be used in custom adventures. Some would require making modifications to more game assets if overriding a game adventure. This would be useful for total conversions where the resource files are already being replaced.
 
-* **QuestThingType:** The [Thing ID][anchor-thing-reference] of the item that will complete the quest. This must come before `[Wad]`. Not usable in custom adventures.
-* **Notes:** Notes are scrolls in an adventure that can be opened to read a message inside. These reference messages found in `STRDAT.DAT`. Not usable in custom adventures.
-* **OpeningDialog:** This opens a dialog at the start of the adventure with the indicated message found in `STRDAT.DAT`. Not usable in custom adventures.
+`QuestThingType`
+: The [Thing ID][anchor-thing-reference] of the item that will complete the quest. This must come before `[Wad]`. This appears to be buggy when used in custom adventures. In my testing, it either doesn't work at all, or the game crashes when the item is picked up.
+
+`Notes`
+: Notes are scrolls in an adventure that can be opened to read a message inside. These reference messages found in `STRDAT.DAT`. Not usable in custom adventures.
+
+`OpeningDialog`
+: This opens a dialog at the start of the adventure with the indicated message found in `STRDAT.DAT`. Not usable in custom adventures.
 
 ## Format documentation: Descriptions (`.TXT`, `.ADV`)
+
+Description files in Birthright are simple text files used to add descriptions for items, people, and adventures. Some simple formatting is allowed.
+
+![image](/img/posts/modding_birthright/birthrt-custom-text.png)
+
+`^F00`
+: Birthright comes with various fonts and different styles thereof.
+
+`^T0`
+: Text can be made translucent. Values from `^T0` (fully opaque) to `^T4` (fully translucent).
+
+`^U`
+: Toggle underlined.
+
+`^B`
+: Toggle bold.
+
+`^I`
+: Toggle italics. I haven't seen this work yet, but it's listed in the code. Maybe it's context sensitive.
+
+`^W000`
+: Word wrap. This appears to be very buggy. In some cases it doesn't reset properly.
+
+`^C000`
+: Text color. Despite taking numbers that appear to be 0 to 255 values, only specific values work (ex: 64 for blue, 188 for green, etc.).
+
+`^CA000`
+: Anti-aliasing color. Untested.
+
+`^CN`
+: Toggles color remapping. Unclear what this means. Untested.
 
 ## Format documentation: Character stats (`.AVA`)
 
@@ -254,7 +295,7 @@ Doom's linedefs and sectors allow setting special attributes, which allow extra 
 
 | Special | ID |
 |---------|----|
-| Door, Doom, Manula, Slow | 1 |
+| Door, Doom, Manual, Slow | 1 |
 | Door, Doom, Walkover, Slow | 4 |
 | Door, Doom, Walkover, Fast | 5 |
 | Swinging Door, Hinges on Left | 26 |
