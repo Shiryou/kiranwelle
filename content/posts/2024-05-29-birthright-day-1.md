@@ -64,7 +64,7 @@ At this point, `MAKE.BAT DOS` seemed to clear a hurdle, didn't have the popup di
 
 Deleting `DOSOBJSR/strmake.obj` brings the dialog back, and running `MAKE.BAT WIN95` first makes it go away.
 
-The `error.log` file also had a line asking whether `strdat.dat` should be deleting, which likely led to the pause in the script. Attempting to answer it as it ran didn't seem to work, but deleting both `BIRTHRT\strdata.dat` and `SIERRA\strdata.dat` resolved the problem.
+The `error.log` file also had a line asking whether `strdat.dat` should be deleted, which likely led to the pause in the script. Attempting to answer it as it ran didn't seem to work, but deleting both `BIRTHRT\strdata.dat` and `SIERRA\strdata.dat` resolved the problem.
 
 ---
 

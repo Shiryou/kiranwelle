@@ -93,6 +93,17 @@ You can play Birthright levels in [GZDoom][gzdoom] by loading the WAD file along
 
     gzdoom.exe -iwad DOOM.WAD -file C:\path\to\BIRTHRT.WAD C:\BIRTHRT\WADS\ENDIE_MW.WAD
 
+## Example adventure file structure
+
+Adventures can consist of multiple WAD files. The complexity supported here is not yet explored. For small maps, it is sufficient to teleport to different areas of the same WAD file for upstairs/downstairs areas. Separate WADs are only needed when the maps are very large.
+
+    SCENES\CASTLE.SCN -- The metadata file for the entry into the adventure.
+    SCENES\CASTLE2.SCN -- The metadata file for a second WAD file to teleport to.
+    TEXT\CASTLE.TXT -- The adventure description.
+    TEXT\CASTLE.ADV -- The adventure report for the reports screen (unused for custom adventures).
+    WAD\CASTLE.WAD -- The level map for the entry into the adventure.
+    WAD\CASTLE2.WAD -- The level map for an area the player can teleport to.
+
 ## Obtaining BIRTHRT.WAD
 &nbsp;
 : *This section is currently a placeholder. There are a few development tasks that must be implemented in BRUT before these steps can be completed.*
@@ -113,6 +124,9 @@ Comments must be placed on an empty line, starting with the number sign (`#`). I
 `Version`
 : Always 1.0
 
+`Wad`
+: The [WAD file][anchor-wad] to load. Only one WAD file can be loaded per scene. When excluded, this appears to default to `BLACK_PW.WAD` (Black Stone Castle).
+
 ### Optional keywords
 `Type`
 :     * `0`: The default. A game adventure.
@@ -120,9 +134,12 @@ Comments must be placed on an empty line, starting with the number sign (`#`). I
 
 `Music`  
 `Demo`  
-`Panorama`  
-`Wad`
-: The [WAD file][anchor-wad] to load. Only one WAD file can be loaded per scene.
+
+`Panorama`
+: The backgrounds to use for the area outside the map. There must be exactly 10 filenames for textures inside TEXTURES.RES and will loop around in order.
+
+`QuestThingType`
+: The [Thing ID][anchor-thing-reference] of the item that will complete the quest. This must come before `[Wad]`. This appears to be buggy when used in custom adventures. When picking up the item in my testing, it either doesn't trigger the end of the adventure or the game crashes. It works fine when editing or replacing a game adventure.
 
 `Difficulty`
 : The difficulty of the adventure in a range of 1 to 4.
@@ -134,13 +151,10 @@ Comments must be placed on an empty line, starting with the number sign (`#`). I
 : The PCX palette to use to load textures.
 
 ### Unusuable keywords
-These keywords can not be used in custom adventures. Some would require making modifications to more game assets if overriding a game adventure. This would be useful for total conversions where the resource files are already being replaced.
-
-`QuestThingType`
-: The [Thing ID][anchor-thing-reference] of the item that will complete the quest. This must come before `[Wad]`. This appears to be buggy when used in custom adventures. In my testing, it either doesn't work at all, or the game crashes when the item is picked up.
+These keywords would require making modifications to more game assets if overriding a game adventure. This would be useful for total conversions where the resource files are already being replaced.
 
 `Notes`
-: Notes are scrolls in an adventure that can be opened to read a message inside. These reference messages found in `STRDAT.DAT`. Not usable in custom adventures.
+: Notes are parchments in an adventure that can be opened to read a message inside. These reference messages found in `STRDAT.DAT`.
 
 `OpeningDialog`
 : This opens a dialog at the start of the adventure with the indicated message found in `STRDAT.DAT`. Not usable in custom adventures.
