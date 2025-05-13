@@ -91,6 +91,8 @@ The third panel is the Lessons Panel. This lists all of a skill's lessons, along
 
 To review, a course's hierarchy is: *Unit* &rarr; *Skill* &rarr; *Lesson* &rarr; *Question*
 
+Be careful not to remove the last skill in a unit or the last question in a lesson, as you will no longer be able to add new ones.
+
 *Note: For the most part you can ignore the ID numbers shown as they should never be very relevant to creating your course. They are an important part of protecting against naming conflicts within your course. If you have two units named "Basics," Lingonaut will be able to distinguish between them by using their IDs internally. While it's generally best to avoid naming multiple units the same, this gives you the flexibility to replace units without worrying about conflicts.*
 
 &nbsp;
@@ -111,13 +113,41 @@ The course overview contains the metadata that allows Lingonaut to understand wh
 * **Version:** The version number. This helps Lingonaut keep track of which courses have been updated and which copy of the course is the latest.
 * **Visible Name:** The name for the course that people will see in Lingonaut.
 
-## Unit overview
+## Skill overview
 
 ![image](/img/posts/lingonaut/unit-overview.png)
 
-Clicking on a unit in the units panel will display the Unit Overview.
+Clicking on a skill in the Unit Panel will display the Skill Overview. This contains the metadata for a particular skill:
 
+* **Name:** The name of your skill.
+* **Description:** A description that tells people what they can expect to learn.
+* **Image Key:** This is the display image. Click on the existing skill image (the apple in the screenshot above) for a selection menu.
+* **Lessons/Level:** The number of lessons per level of the skill when using the automation tool.
+* **Stroke Color:** The color of the circle around the display image.
+* **Fill Color:** The background color behind the display image.
+* **Position:** Currently unclear. Presumably allows re-arranging the order of skills, but doesn't appear to have any effect in Creatonaut.
 
+The rocket button opens the Automation Wizard. This is a feature that is not yet available. This will use your vocabulary and sentence lists to assemble exercises based on the number of lessons per level you define. For example, if you specify 4 lessons per level, the Automation Wizard will create 20 lessons, where the first 2 lessons are level 1, the next 2 are level 2, etc.
+
+## Creating questions
+
+![image](/img/posts/lingonaut/new-question.png)
+
+Lingonaut supports 11 different types of questions to give learners different ways of interacting with the language lesson. We'll give a brief overview here, then dive into each one in detail:
+
+* **PickOne:** A standard multiple choice question.
+* **ImagePick:** A multiple choice question that includes an image for each option.
+* **FlashCard:** A standard flash card, containing a phrase on the front and it's translation on the back.
+* **PickOneAudio:** Select the correct audio sample based on the question..
+* **SpellingPick:** Select the correct spelling of a word based on the question.
+* **Match:** Select the matching items from two separate lists.
+* **AudioMatch:** Select the text that matches each audio sample.
+* **WriteWords:** Write the answer to the question.
+* **PickWords:** Translate a sentence by picking the correct words.
+* **PickOneMeaning:** Pick the correct meaning based on the question.
+* **PickMissingWord:** A standard fill in the blank question.
+
+*Note: For an ImagePick question, you must write out the word for the image you want. Unlike the Skill Overview section, there does not appear to be a way to pop up the image selection screen.*
 
 </article>
 
