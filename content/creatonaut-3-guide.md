@@ -53,9 +53,11 @@ Creatonaut 3 is the course creation tool that Lingonaut uses to build new langua
 
 ## Important note
 
-Creatonaut is very new. It is likely to change often and contain bugs. Safe often.
+Creatonaut is very new. It is likely to change often and contain bugs. Save often.
 
 There is currently a bug that will empty your session as soon as you click "Open Project." Be very careful when using the File menu to Export your project that you don't accidentally click this button or you will lose your data. This issue has been reported to the developer.
+
+Lastly, Creatonaut is not designed to be used in mobile browsers, as it requires the use of the right-click function.
 
 ## Creating your first course
 
@@ -69,9 +71,13 @@ Once you've entered your name, you can create a new course by clicking the "New 
 
 ## Creatonaut layout
 
+Creatonaut's layout is expected to change. Please keep an eye out for notes about these changes.
+
 ### Project Files Panel
 
 ![image](/img/posts/lingonaut/course-overview.png)
+
+This panel is hidden by default and can be enabled with *View* &rarr; *Show Project Files*.
 
 The Project Files panel gives you an overview of the files that are part of your course. This will include the basic metadata (it's name, who created it, it's version, etc.), the unit definition files, your vocabulary and sentences lists, and any audio files you create.
 
@@ -85,15 +91,17 @@ When you export your course using *File* &rarr; *Export Project (.cn3)*, Creaton
 
 ![image](/img/posts/lingonaut/create-a-unit.png)
 
-The second panel is the Units Panel. This lists all of your units, along with each unit's skills and the skills' unique IDs. You can also create new units and skills or delete existing ones by right-clicking on this list, as shown above.
+The second panel is the Units Panel. This lists all of your units, along with each unit's skills and the skills' unique IDs (if enabled). You can also create new units and skills or delete existing ones by right-clicking on this list, as shown above.
 
-The third panel is the Lessons Panel. This lists all of a skill's lessons, along with the questions associated to them and the questions' unique IDs. As with the Units and Skill, you can create and delete lessons and questions by right-clicking.
+The third panel is the Lessons Panel. This lists all of a skill's lessons, along with the questions associated to them and the questions' unique IDs (if enabled). As with the Units and Skill, you can create and delete lessons and questions by right-clicking.
+
+
 
 To review, a course's hierarchy is: *Unit* &rarr; *Skill* &rarr; *Lesson* &rarr; *Question*
 
 Be careful not to remove the last skill in a unit or the last question in a lesson, as you will no longer be able to add new ones.
 
-*Note: For the most part you can ignore the ID numbers shown as they should never be very relevant to creating your course. They are an important part of protecting against naming conflicts within your course. If you have two units named "Basics," Lingonaut will be able to distinguish between them by using their IDs internally. While it's generally best to avoid naming multiple units the same, this gives you the flexibility to replace units without worrying about conflicts.*
+*Note: IDs can be enabled by using _View_ &rarr; _Show IDs_. For the most part you can ignore the ID numbers shown as they should never be very relevant to creating your course. They are an important part of protecting against naming conflicts within your course. If you have two units named "Basics," Lingonaut will be able to distinguish between them by using their IDs internally. While it's generally best to avoid naming multiple units the same, this gives you the flexibility to replace units without worrying about conflicts.*
 
 &nbsp;
 
@@ -148,6 +156,10 @@ Lingonaut supports 11 different types of questions to give learners different wa
 * **PickMissingWord:** A standard fill in the blank question.
 
 *Note: For an ImagePick question, you must write out the word for the image you want. Unlike the Skill Overview section, there does not appear to be a way to pop up the image selection screen.*
+
+## Notable changes
+
+* 2025-05-14: The Project Files panel and skill and question IDs are hidden by default and can be shown using *View* &rarr; *Show Project Files* and *View* &rarr; *Show IDs*, respectively.
 
 </article>
 
