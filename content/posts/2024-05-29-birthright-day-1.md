@@ -1,12 +1,9 @@
 ---
-title: "Rebuilding Birthright - Day 1 & 2"
+title: "Rebuilding Birthright"
 date: 2024-05-29
 categories: [Birthright]
 series: ["Rebuilding Birthright: The Gorgon's Alliance"]
 ---
-
-
-### Day 1
 
 The first day involved mostly figuring out which dependencies were needed where and how to get them installed. You can read about that [here]({{< ref "2024-05-28-birthright.md" >}} "Compiling Birthright: The Gorgon's Alliance").
 
@@ -17,7 +14,7 @@ We're going to take advantage of the developer's (theoretical) wisdom in buildin
 >     Error(E02): Make execution terminated
 >     'grep' is not recognized as an internal or external command, operable program or batch file.
 
-There seems to be some corruption in the Makefile. Removing last character in `Makefile` resolves the issue.
+There seems to be some corruption in the Makefile. Removing last character in `Makefile` resolves the issue.[^1]
 
 Running `MAKE.BAT dos` again, we get an error dialog:
 
@@ -33,8 +30,6 @@ Closing the dialog kept the script running. I left it for about 15 minutes. In t
 >     Error(E42): Last command making (strdat.dat) returned a bad status
 >     Error(E02): Make execution terminated
 >     Terminate batch job (Y/N)? y
-
-### Day 2
 
 I ran `MAKE.BAT WIN95` and just `MAKE.BAT` to test
 
@@ -115,7 +110,11 @@ The two errors went away and I continued squashing minor issues for about two ho
 
 There were some other minor issues that needed ironing out, but those are mostly small errors that likely came out of changes in the standard over time. I won't bore anyone with them here. They're available in the commit history if anyone is curious.
 
-At this point, I'm up to 101 successfully built .obj files, so we're off to a good start. We also have 545 "No newline at end of file" errors.
+At this point, I'm up to 101 successfully built .obj files, so we're off to a good start. We also have 545 "No newline at end of file" errors.[^1]
 
 
 ---
+
+[^1]: This turned out to be caused by a [substitute character][wiki-subcharacter]. This character was used as an end-of-file marker in older operating systems and has become much less common now. This caused Windows to not recognize it and throw the error in the Makefiles and also caused the "No newline at end of file" errors.
+
+[wiki-subcharacter]: https://en.wikipedia.org/wiki/Substitute_character
