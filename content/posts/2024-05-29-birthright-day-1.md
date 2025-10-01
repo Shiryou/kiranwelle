@@ -1,8 +1,11 @@
 ---
-title: "Rebuilding Birthright"
+title: "Rebuilding Birthright: Misdirection"
+comments: true
 date: 2024-05-29
 categories: [Birthright]
 series: ["Rebuilding Birthright: The Gorgon's Alliance"]
+notices: 
+  - "This post is now obsolete. Please refer to <a href='/posts/2025/09/birthright-new-beginning.html'>Rebuilding Birthright: A New Beginning</a>."
 ---
 
 The first day involved mostly figuring out which dependencies were needed where and how to get them installed. You can read about that [here]({{< ref "2024-05-28-birthright.md" >}} "Compiling Birthright: The Gorgon's Alliance").
@@ -113,8 +116,7 @@ There were some other minor issues that needed ironing out, but those are mostly
 At this point, I'm up to 101 successfully built .obj files, so we're off to a good start. We also have 545 "No newline at end of file" errors.[^1]
 
 
----
-
 [^1]: This turned out to be caused by a [substitute character][wiki-subcharacter]. This character was used as an end-of-file marker in older operating systems and has become much less common now. This caused Windows to not recognize it and throw the error in the Makefiles and also caused the "No newline at end of file" errors.
 
+[kw-rebuild-new]: {{< ref "2025-09-30-birthright-new-beginning.md" >}} "Rebuilding Birthright: Misdirection"
 [wiki-subcharacter]: https://en.wikipedia.org/wiki/Substitute_character

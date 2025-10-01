@@ -1,5 +1,6 @@
 ---
 title: "Rebuilding Birthright: The Gorgon's Alliance"
+comments: true
 date: 2024-05-28
 categories: [Birthright]
 series: ["Rebuilding Birthright: The Gorgon's Alliance"]
@@ -24,11 +25,12 @@ These disks included not only the source code for his Leisure Suit Larry games, 
 As you might expect from video game source code, there are some library dependencies to resolve. I discovered these on [a previous try at building the source about 3 years ago][birghrightnet_previous] that went nowhere.
 
 * [Source and audio files][birthrt_source]
-* [Open Watcom 1.9][openwatcom]
-* [DirectX SDK April 2005][directx_sdk]
+* [Watcom 10.6][watcom10][^1]
+* [DirectX 5.0 SDK][directx_sdk][^1]
 * [Windows 95 DDK][windows95_ddk]
+* [grep for Windows][grep] (optional)
 
-### Open Watcom 1.9
+### Watcom 10.6
 
 We'll be using the `MAKE.BAT` command included with the source to leverage the (theoretical) wisdom of the developers in building. Running this gives us:
 
@@ -50,7 +52,7 @@ In my case, this turned out so:
 >     > set include
 >     INCLUDE=C:\WATCOM\H;C:\WATCOM\H\NT;C:\WATCOM\H\NT\DIRECTX;C:\WATCOM\H\NT\DDK
 
-### DirectX SDK April 2005
+### DirectX 5.0 SDK
 
 Looking at `error.log`, we see
 
@@ -61,9 +63,9 @@ Looking at `error.log`, we see
 >       included from main.cpp(73)
 >     (91,10): Error! E059: unable to open 'DPlay.h'
 
-`DPlay.h` is the header file for DirectPlay from old versions of the DirectX SDK. As you can see in [the modern installation instruction][kw-brinstall], DirectPlay is required to play the game. The best solution for this error is to install the DirectX SDK from April 2005.
+`DPlay.h` is the header file for DirectPlay from old versions of the DirectX SDK. As you can see in [the modern installation instruction][kw-brinstall], DirectPlay is required to play the game. The best solution for this error is to install the DirectX 5.0 SDK. The game was upgraded to DirectX 5.0 in the 1.4 patch.
 
-The installer pretends to install fine, but the files are nowhere to be found. That's fine, because we only really need the header files. These are saved to `%LOCALAPPDATA%\Temp\Include`, so I created `C:\DirectXSDK` and move the files in there. This also gets added to the `INCLUDES` environment variable.
+I created `C:\DirectXSDK` and moved the header files there. This also gets added to the `INCLUDES` environment variable.[^2]
 
 ### Windows 95 SDK/DDK
 
@@ -73,14 +75,27 @@ Looking at `error.log`, we see
 
 [According to Microsoft][digitalv_h], `digitalv.h` is part of "Windows Multimedia." The file is included in the 16-bit header files of the Windows 95 SDK. Much like the DirectX SDK, this doesn't want to install properly on modern systems, but since we only need the header files, we can copy them directly from the ISO file.
 
-I copied both the `INC16` and `INC32` folders to C:\Win95DDK and added them to my `PATH` variable. You're welcome to throw all of these things into a single directory if you chose, but I think keeping things separated makes it easier to find and debug issues.
+You should only need the `INC32` folder, which I copied to C:\Win95DDK and added to my `PATH` variable. You're welcome to throw all of these things into a single directory if you chose, but I think keeping things separated makes it easier to find and debug issues.
+
+### Grep for Windows
+
+The build scripts included with the source archive use `grep` to filter and display error messages at the end of a build to avoid needing to open and read an error log for each file separately. Grep for Windows should work out of the box when you extract the binaries and dependencies into a directory on your hard drive and then add that directory to the `PATH` environment variable. If you receive an error about a missing DLL file, you likely need to install Internet Explorer 4.0 or higher, depending on your operating system, and the [Visual C++ 6 Redistributable][microsoft-vc6redist].
+
+[^1]: A previous version of this post directed you to the DirectX SDK from April 2005 and [Open Watcom 1.9][openwatcom]. I discuss the changes in [*A New Beginning*][kw-brnew].
+
+[^2]: If you have 7-zip installed, you can generally extract these files directly from many types of installers without needing to run them at all.
 
 [birghrightnet_previous]: http://www.birthright.net/forums/showthread.php?28960-Any-tech-savvy-peeps-here-interested-in-the-Birthright-PC-game-source-code&p=92991&viewfull=1#post92991
 [birthrightnet]: http://www.birthright.net/
 [birthrt_source]: https://archive.org/details/birthrt_source
 [digitalv_h]: https://learn.microsoft.com/en-us/windows/win32/api/digitalv/
-[directx_sdk]: https://archive.org/details/dxsdk_apr2005
+[directx_sdk]: https://archive.org/details/idx5sdk
+[grep]: https://gnuwin32.sourceforge.net/packages/grep.htm
 [kw-brinstall]: {{< ref "birthright.html" >}} "Installing Birthright: The Gorgon's Alliance on Windows 10"
+[kw-brmew]: {{< ref "birthright-new-beginning.md" >}} "Rebuilding Birthright: A New Beginning"
+[kw-defunct]: {{< ref "2024-05-29-birthright-day-1.md" >}} "Rebuilding Birthright: Misdirection"
+[microsoft-vc6redist]: https://web.archive.org/web/20070112121812/http://support.microsoft.com/kb/259403
 [openwatcom]: http://openwatcom.org/ftp/install/
 [polygon-allowe]: https://www.polygon.com/2018/12/1/18121018/leisure-suit-larry-source-code-ebay-for-sale-al-lowe-sierra-on-line
+[watcom10]: https://winworldpc.com/product/watcom-c-c/106
 [windows95_ddk]: https://winworldpc.com/product/windows-sdk-ddk/windows-95-ddk

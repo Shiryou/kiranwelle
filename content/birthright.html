@@ -1,6 +1,6 @@
 ---
-title: "Installing Birthright: The Gorgon's Alliance on Windows 10"
-description: "Getting Birthright: The Gorgon's Alliance running in Windows 10 is surprisingly easy. Even multiplayer play is possible."
+title: "Installing Birthright: The Gorgon's Alliance on Windows 10 & 11"
+description: "Getting Birthright: The Gorgon's Alliance running in Windows 10 & 11 is surprisingly easy. Even multiplayer play is possible."
 cover_image: img/posts/birthright/cover-title.jpg
 url: birthright/
 type: page
@@ -13,21 +13,19 @@ series: ["Birthright: The Gorgon's Alliance Support"]
 
 <article>
 	<img src="{{< relref "/" >}}img/posts/birthright/cover-middlebw.jpg">
-	<p>One of the things I find most interesting about desktop support is trying to support legacy hardware and software. Not only does it provide an opportunity to learn more about the history of computing, but it also tends to provide some interesting compatibility challenges.</p>
-	<p>The place where I run into this most often and that I think gets the most words written about it on the Internet is in getting old games running on modern hardware and operating systems.</p>
-	<p>Surprisingly, Windows 10 still supports a wide array of classic 16-bit games that one might expect would never run. That includes the title I'm writing about today: <em>Birthright: The Gorgon's Alliance</em>.</p>
+	<p>One of the things I find most interesting about desktop support is trying to support legacy hardware and software. Not only does it provide an opportunity to learn more about the history of computing, but it also tends to provide some interesting compatibility challenges. The place where I run into this most often and that I think gets the most words written about it on the Internet is in getting old games running on modern hardware and operating systems. Surprisingly, Windows 10 & 11 still support a wide array of classic games that one might expect would never run. That includes the title I'm writing about today: <em>Birthright: The Gorgon's Alliance</em>.</p>
 
 	<div id="toc"></div>
 
 	<h2 id="installing">Installing the game</h2>
-	<p>Getting the game running in Windows 10 is surprisingly easy. You only need a few things to get started:</p>
+	<p>Getting the game running in Windows 10 & 11 is surprisingly easy. You only need a few things to get started:</p>
 
 	<ul>
-		<li>A Birthright: The Gorgon's Alliance CD or an ISO image of the CD.</li>
+		<li>A Birthright: The Gorgon's Alliance CD or an ISO image of the CD. (These can sometimes be found on eBay. Sadly, the game is no longer sold on any digital storefronts.)</li>
+		<li><a href="http://www.birthright.net/forums/downloads.php?do=file&id=93" target="_blank">Patch 1.4</a> to update the game to the latest version. (Also available from <a href="https://web.archive.org/web/20170626004704/https://sierrahelp.com/Patches-Updates/Patches-Updates-Games/BirthrightUpdates.html" target="_blank">Sierra Help Pages</a>, referred to as Birthright Windows '95 Update 1.0.4.)</li>
 		<li><a href="https://www.7-zip.org/download.html" target="_blank">7-zip</a> to extract the game files from the 1.4 patch.</li>
-		<li><a href="http://www.birthright.net/forums/downloads.php?do=file&id=93" target="_blank">Patch 1.4</a> to update the game to the latest version. (Also available from <a href="http://sierrahelp.com/Patches-Updates/Patches-Updates-Games/BirthrightUpdates.html" target="_blank">Sierra Help Pages</a>, referred to as Birthright Windows '95 Update 1.0.4.)</li>
 		<li><a href="http://www.birthright.net/forums/downloads.php?do=file&id=94" target="_blank">Scenario Editor</a> (optional) to mod the game.</li>
-		<li><a href="http://www.birthright.net/forums/downloads.php?do=file&id=91" target="_blank">Character Editor</a> (optional) to mod the game. (Also available from <a href="http://www.sierrahelp.com/Games/BirthrightHelp.html" target="_blank">Sierra Help Pages</a>.)</li>
+		<li><a href="http://www.birthright.net/forums/downloads.php?do=file&id=91" target="_blank">Character Editor</a> (optional) to mod the game. (Also available from <a href="https://web.archive.org/web/20170626031633/http://www.sierrahelp.com/Games/BirthrightHelp.html" target="_blank">Sierra Help Pages</a>.)</li>
 		<li><a href="https://github.com/solemnwarning/ipxwrapper/releases" target="_blank">ipxwrapper</a> (optional) for multiplayer.</li>
 	</ul>
 
@@ -41,13 +39,13 @@ series: ["Birthright: The Gorgon's Alliance Support"]
 		<img class="list" src="{{< relref "/" >}}img/posts/birthright/extract.png">
 		<li>Extract the contents of the patch and, if desired, the Scenario Editor and Character Editor.</li>
 		<img class="list" src="{{< relref "/" >}}img/posts/birthright/patch.png">
-		<li>patch.exe is an installer file that will not run on Windows 10. Instead, use 7-zip to extract all the files from the executable.</li>
+		<li>patch.exe is an installer file that will not run on Windows 10 or 11. Instead, use 7-zip to extract all the files from the executable.</li>
 		<img class="list" src="{{< relref "/" >}}img/posts/birthright/patch_warn.png">
 		<li>You'll likely see a warning that the file could not be opened as a [PE] archive and was opened as a [zip] archive instead. This is fine and doesn't require any action.</li>
 		<img class="list" src="{{< relref "/" >}}img/posts/birthright/move.png">
 		<li>Move the resulting files from the last two steps to the BIRTHRT folder.</li>
 		<img class="list" src="{{< relref "/" >}}img/posts/birthright/logo.png">
-		<li>Double click WINBR.EXE to start the game.</li>
+		<li>Double-click WINBR.EXE to start the game.</li>
 		<img class="list" src="{{< relref "/" >}}img/posts/birthright/editors.png">
 		<li>If you included them in the setup, you can also double-click CHARED.EXE or SCENED95.EXE to start the Character Editor or Scenario Editor, respectively.</li>
 	</ol>
@@ -59,7 +57,7 @@ series: ["Birthright: The Gorgon's Alliance Support"]
 
 	<ol>
 		<li>Extract the contents of the latest ipxwrapper release archive into the BIRTHRT folder.</li>
-		<li>Double-click the <code>directplay-win32.reg</code> or <code>directplay-win32.reg</code> file, depending on <a href="https://support.microsoft.com/en-us/office/determine-whether-your-computer-is-running-a-32-bit-version-or-64-bit-version-of-the-windows-operating-system-aac162a1-0cb3-46f2-888f-2f22897396ce" target="_blank">your system architecture</a>.
+		<li>Double-click the <code>directplay-win32.reg</code> or <code>directplay-win64.reg</code> file, depending on <a href="https://support.microsoft.com/en-us/office/determine-whether-your-computer-is-running-a-32-bit-version-or-64-bit-version-of-the-windows-operating-system-aac162a1-0cb3-46f2-888f-2f22897396ce" target="_blank">your system architecture</a>.
 		<img class="list" src="{{< relref "/" >}}img/posts/birthright/multcommon1.png">
 		<li>Run <code>WINBR.EXE</code> and select the <em>Multiplayer</em> option in the main menu.</li>
 		<img class="list" src="{{< relref "/" >}}img/posts/birthright/multcommon2.png">
@@ -106,7 +104,7 @@ series: ["Birthright: The Gorgon's Alliance Support"]
 	<p>Although I can no longer find references to its planned sequels, any hope of more of the Birthright setting in videogame form was lost when the game was not able to please fans.</p>
 
 	<h2 id="modding">Modding the Game</h2>
-	<p>Aside from the official Scenario Editor and Character Editor, one can modify Birthright's assets using the <a href="https://github.com/Shiryou/brut">BRUT</a>. This tool is still in active development.</p>
+	<p>Aside from the official Scenario Editor and Character Editor, one can modify Birthright's assets using the <a href="https://github.com/Shiryou/brut">Birthright Resource Utility (BRUT)</a>. This tool is still in active development.</p>
 
 	<p>Thanks to some digging by <a href="http://www.birthright.net/">Birthright.net</a> users kasrkraw and InVivoSomnium, there is <a href="http://www.birthright.net/forums/showthread.php?28766-Modding-Birthright-Gorgon-s-Alliance-Adventures&highlight=modding">some information available</a> on the modified Doom WADs that Birthright uses to run its adventures.</p>
 
@@ -114,14 +112,13 @@ series: ["Birthright: The Gorgon's Alliance Support"]
 
 	<h2 id="compiling">Compiling the game</h2>
 	<p>In 2018, Al Lowe, the creator of another of my favorite Sierra games (<a href="https://www.mobygames.com/game/torins-passage"><em>Torin's Passage</em></a>), <a href="https://www.pcgamer.com/leisure-suit-larry-creator-al-lowe-is-selling-his-archive-including-sierra-source-code/">sold his archive of old Sierra "junk"</a>. This junk included diskettes containing old Sierra source code. A year later, the code for <em>Birthright: The Gorgon's Alliance</em> appeared <a href="https://archive.org/details/birthrt_source">on the Internet Archive</a>.</p>
-	<p>I have not been able to successfully compile the game yet, but <a href="http://www.birthright.net/forums/showthread.php?28960-Any-tech-savvy-peeps-here-interested-in-the-Birthright-PC-game-source-code&p=92991&viewfull=1#post92991">here are my notes</a> on the process thus far.</p>
 	<p>The necessary libraries and packages are:</p>
 	<ul>
-		<li><a href="http://openwatcom.org/ftp/install/">OpenWatcom 1.9</a> - The C++ compiler (including the <code>wmake</code> utility) used to compile the source. Make sure to run <code>setenvironment.bat</code> to add the necessary include files.</li>
-		<li><a href="https://archive.org/details/dxsdk_apr2005">Microsoft DirectX SDK April 2005</a> - The latest version of the DirectX SDK that seems to include <code>dpay.h</code>.</li>
-		<li><a href="https://winworldpc.com/product/windows-sdk-ddk/windows-95-ddk">Windows 95 SDK</a> - This SDK containes some necessary include files.</li>
+		<li><a href="https://winworldpc.com/product/watcom-c-c/106">Watcom 10.6</a> - The C++ compiler (including the <code>wmake</code> utility) used to compile the source. Make sure to run <code>setenvironment.bat</code> to add the necessary include files.</li>
+		<li><a href="https://archive.org/details/idx5sdk">Microsoft DirectX 5.0 SDK</a> - The latest version of the DirectX SDK that seems to include <code>dpay.h</code>.</li>
+		<li><a href="https://winworldpc.com/product/windows-sdk-ddk/windows-95-ddk">Windows 95 DDK</a> - This SDK containes some necessary include files.</li>
 	</ul>
-	<p>It's not necessary to install the two SDKs. You can simply extract the include directories and add them to OpenWatcom's <code>INCLUDE</code> environment variable.</p>
+	<p>It's not necessary to install the two SDKs. You can simply extract the include directories and add them to Watcom's <code>INCLUDE</code> environment variable.</p>
 
 	<h2 id="troubleshooting">Troubleshooting</h2>
 	<h6>failed writing initial conditions file</h6>
