@@ -92,7 +92,7 @@ The build scripts included with the source archive use `grep` to filter and disp
 [directx_sdk]: https://archive.org/details/idx5sdk
 [grep]: https://gnuwin32.sourceforge.net/packages/grep.htm
 [kw-brinstall]: {{< ref "birthright.html" >}} "Installing Birthright: The Gorgon's Alliance on Windows 10"
-[kw-brmew]: {{< ref "birthright-new-beginning.md" >}} "Rebuilding Birthright: A New Beginning"
+[kw-brnew]: {{< ref "2025-09-30-birthright-new-beginning.md" >}} "Rebuilding Birthright: A New Beginning"
 [kw-defunct]: {{< ref "2024-05-29-birthright-day-1.md" >}} "Rebuilding Birthright: Misdirection"
 [microsoft-vc6redist]: https://web.archive.org/web/20070112121812/http://support.microsoft.com/kb/259403
 [openwatcom]: http://openwatcom.org/ftp/install/

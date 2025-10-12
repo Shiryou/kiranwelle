@@ -1,7 +1,7 @@
 ---
 title: "Rebuilding Birthright: A New Beginning"
 comments: true
-date: 2025-09-30
+date: 2025-09-30 20:41:59 -0700
 categories: [Birthright]
 series: ["Rebuilding Birthright: The Gorgon's Alliance"]
 ---
