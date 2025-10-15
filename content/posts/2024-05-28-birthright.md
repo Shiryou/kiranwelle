@@ -65,7 +65,7 @@ Looking at `error.log`, we see
 
 `DPlay.h` is the header file for DirectPlay from old versions of the DirectX SDK. As you can see in [the modern installation instruction][kw-brinstall], DirectPlay is required to play the game. The best solution for this error is to install the DirectX 5.0 SDK. The game was upgraded to DirectX 5.0 in the 1.4 patch.
 
-I created `C:\DirectXSDK` and moved the header files there. This also gets added to the `INCLUDES` environment variable.[^2]
+I created `C:\DirectXSDK` and moved the SDK files there. The `lib` folder needs to be added to the `LIB` environment variable, and the `inc` folder to the `INCLUDES` environment variable.[^2]
 
 ### Windows 95 SDK/DDK
 
