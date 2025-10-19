@@ -41,10 +41,10 @@ Just to verify, I ran the compilation in Windows 95 and Windows 11, and the resu
 That's three (admittedly small) goals completed in just a couple of weeks. This gives me some confidence that I can actually produce something worthwhile. Of course, now come the more challenging problems, so you may not hear much from me for a while.
 
 
-[kw-newbeg]: {{< ref "2025-09-30-birthright-new-beginning.md" >}} "Rebuilding Birthright: A New Beginning"
-[kw-first]: {{< ref "2025-10-14-releasing-first-build.md" >}} "Releasing Our First Build"
-[windows95_ddk]: https://winworldpc.com/product/windows-sdk-ddk/windows-95-ddk
-[github-rbxit]: https://github.com/juanitogan/rbxit/issues/13
 [cybernews]: https://cybernews.com/security/hundreds-npm-packages-compromised-in-ongoing-attack/
-[wiki-portex]: https://en.wikipedia.org/wiki/Portable_Executable
+[github-rbxit]: https://github.com/juanitogan/rbxit/issues/13
+[kw-first]: {{< ref "2025-10-14-releasing-first-build.md" >}} "Releasing Our First Build"
+[kw-newbeg]: {{< ref "2025-09-30-birthright-new-beginning.md" >}} "Rebuilding Birthright: A New Beginning"
 [oldnewthing]: https://devblogs.microsoft.com/oldnewthing/20180103-00/?p=97705
+[wiki-portex]: https://en.wikipedia.org/wiki/Portable_Executable
+[windows95_ddk]: https://winworldpc.com/product/windows-sdk-ddk/windows-95-ddk
