@@ -2,7 +2,8 @@
 title: "Texturing Birthright adventure maps in Doom map editors"
 date: 2024-10-11
 categories: [Birthright]
-series: ["Modding Birthright: The Gorgon's Alliance"]
+tags: [BRUT]
+series: ["modding-birthright-the-gorgons-alliance"]
 ---
 
 <style>

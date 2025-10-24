@@ -2,7 +2,8 @@
 title: "You Know What They Say About Assumptions…"
 date: 2024-09-02
 categories: [Birthright]
-series: ["Modding Birthright: The Gorgon's Alliance"]
+tags: [BRUT]
+series: ["modding-birthright-the-gorgons-alliance"]
 ---
 
 Today, I learned that I am not only much closer to a working decompression algorithm than I thought, but I also made a very bad assumption when starting this project—one that I could have avoided with a little more preparation.

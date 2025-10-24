@@ -3,7 +3,8 @@ title: "Rebuilding Birthright: Organizing the Project"
 comments: true
 date: 2025-10-12 14:01:00 -0700
 categories: [Birthright]
-series: ["Rebuilding Birthright: The Gorgon's Alliance"]
+tags: [BirP]
+series: ["rebuilding-birthright-the-gorgons-alliance"]
 ---
 
 Now that we've compiled Birthright: The Gorgon's Alliance, it's time to get everything of consequence into version control so we can manage and update the code effectively. Based on some of the batch files included in the source leak, it seems likely that Synergistic saved changes in ZIP files. While that was potentially a reasonable approach at the time, based on the tools available, it's definitely not a good idea today. It would make it very difficult to work well with multiple contributors. [Concurrent Versions System (CVS)][wiki-cvs] was popular and freely available, so I would be surprised if they didn't have **some** kind of proper version control. Maybe something about their workflow made this difficult to use. I didn't start using version control until Subversion in the early 2000s, so I have very little knowledge of the standards in the 90s.

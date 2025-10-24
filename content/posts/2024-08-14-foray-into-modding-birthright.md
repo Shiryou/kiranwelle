@@ -2,7 +2,8 @@
 title: "A Foray Into Modding Birthright"
 date: 2024-08-06
 categories: [Birthright]
-series: ["Modding Birthright: The Gorgon's Alliance"]
+tags: [BRUT]
+series: ["modding-birthright-the-gorgons-alliance"]
 ---
 
 For several years there has been [a thread on the Birthright.net forums][brnet-modding] talking about modding Birthright: The Gorgon's Alliance. The posts have been few and far between, but there does seem to be some interest into adding new adventures to the game.

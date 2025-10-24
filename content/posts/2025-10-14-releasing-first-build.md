@@ -3,7 +3,8 @@ title: "Releasing Our First Build"
 comments: true
 date: 2025-10-14 17:05:00 -0700
 categories: [Birthright]
-series: ["Rebuilding Birthright: The Gorgon's Alliance"]
+tags: [BirP]
+series: ["rebuilding-birthright-the-gorgons-alliance"]
 ---
 
 ## The No CD Fix
@@ -49,7 +50,6 @@ I've created a mod page for the [Birthright Preservation Patch][moddb-birp] and 
 [^2]: A patch version is a part of the [Semantic Versioning][semver] standard.
 
 [github-birp]: https://github.com/Shiryou/BirP
-[github-brut]: https://github.com/Shiryou/brut
 [kw-install]: {{< ref "../birthright.html" >}} "Installing Birthright: The Gorgon's Alliance on Windows 10 & 11"
 [moddb-birp]: https://www.moddb.com/mods/birthright-preservation-patch
 [moddb-birthrt]: https://www.moddb.com/games/birthright-the-gorgons-alliance

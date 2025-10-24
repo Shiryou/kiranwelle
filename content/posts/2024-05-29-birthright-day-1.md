@@ -3,7 +3,7 @@ title: "Rebuilding Birthright: Misdirection"
 comments: true
 date: 2024-05-29
 categories: [Birthright]
-series: ["Rebuilding Birthright: The Gorgon's Alliance"]
+series: ["rebuilding-birthright-the-gorgons-alliance"]
 notices: 
   - "This post is now obsolete. Please refer to <a href='/posts/2025/09/birthright-new-beginning.html'>Rebuilding Birthright: A New Beginning</a>."
 ---

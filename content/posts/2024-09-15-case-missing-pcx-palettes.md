@@ -2,7 +2,8 @@
 title: "The Case of the Missing PCX Palettes"
 date: 2024-09-15
 categories: [Birthright]
-series: ["Modding Birthright: The Gorgon's Alliance"]
+tags: [BRUT]
+series: ["modding-birthright-the-gorgons-alliance"]
 ---
 
 The BRUT project is now nearing feature parity with the original RESUTIL application, which feels fantastic. So far, the changes made by BRUT are identical to those made by RESUTIL on a binary level. The only missing feature is LZSS compression. As the test below demonstrates, overriding resources without LZSS compression is still possible.

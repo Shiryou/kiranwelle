@@ -3,7 +3,7 @@ title: "Rebuilding Birthright: The Gorgon's Alliance"
 comments: true
 date: 2024-05-28
 categories: [Birthright]
-series: ["Rebuilding Birthright: The Gorgon's Alliance"]
+series: ["rebuilding-birthright-the-gorgons-alliance"]
 ---
 
 ## What?

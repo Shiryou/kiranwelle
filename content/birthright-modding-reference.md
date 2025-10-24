@@ -8,7 +8,7 @@ show_toc: true
 comments: true
 date: 2024-10-15
 categories: [Birthright]
-series: ["Birthright: The Gorgon's Alliance Support"]
+series: ["birthright-the-gorgons-alliance-support"]
 ---
 <style>
 table {

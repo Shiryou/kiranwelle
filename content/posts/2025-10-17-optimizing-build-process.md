@@ -3,7 +3,7 @@ title: "Optimizing Our Build Process"
 comments: true
 date: 2025-10-17 22:00:00 -0700
 categories: [Birthright]
-series: ["Rebuilding Birthright: The Gorgon's Alliance"]
+series: ["rebuilding-birthright-the-gorgons-alliance"]
 ---
 
 Now that we've released our first build, I've done some thinking about improvements we can make to the build process and the builds themselves to make them more useful to not only me, but also anyone downloading and using them. During [my conversation with juanitogan][github-rbxit], we touched on binary reproducibility. In theory, compiling source code should be deterministic. This means that the compilation process will produce the same output for the same input; every time.

@@ -3,7 +3,8 @@ title: "Rebuilding Birthright: A New Beginning"
 comments: true
 date: 2025-09-30 20:41:59 -0700
 categories: [Birthright]
-series: ["Rebuilding Birthright: The Gorgon's Alliance"]
+tags: [BRUT, BirP]
+series: ["rebuilding-birthright-the-gorgons-alliance"]
 ---
 
 Somehow, it's been over a year since we started [Rebuilding Birthright][kw-rebuild]. In that time, I've almost finished [BRUT][github-brut], the Birthright Resource Utility for viewing, modifying, and extracting files from Birthright's resource files. I've also done enough research to put together the beginnings of a [Birthright Modding Reference][kw-modref] for creating custom adventures.

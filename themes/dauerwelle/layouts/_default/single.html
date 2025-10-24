@@ -10,7 +10,7 @@
 			<a href="{{ relURL "/" }}" class="return">&larr; Return</a>
 			<h1>{{ .Title }}</h1>
 			{{ if .Params.series }}
-			<div><b>Part of the <a href="{{ relURL "/" }}series/{{ (index .Params.series 0 | urlize) }}.html">{{ index .Params.series 0 }}</a> series</b></div>
+            {{ range first 1 .Params.series }}<div><b>Part of the <a href="{{ (site.GetPage .).Path }}.html">{{ (site.GetPage .).Title }}</a> series</b></div>{{ end }}
 			{{ end }}
 			<div class="post-meta">
 					{{ if isset .Params "date" }}
@@ -78,10 +78,11 @@
 				<div class="post-content e-content" itemprop="articleBody">
 					{{ .Content }}
 				</div>
-				<!-- {{ partial "post-navigation.html" . }} -->
 				<a class="u-url" href="{{ .RelPermalink }}" hidden></a>
 			</article>
+            {{ if eq .Type "posts" }}
 			{{ partial "post-navigation.html" . }}
+            {{ end }}
 
 			{{ if .Params.show_toc }}
 			<script>createTOC()</script>

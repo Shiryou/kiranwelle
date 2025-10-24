@@ -2,7 +2,8 @@
 title: "Decomp-depression"
 date: 2024-08-19
 categories: [Birthright]
-series: ["Modding Birthright: The Gorgon's Alliance"]
+tags: [BRUT]
+series: ["modding-birthright-the-gorgons-alliance"]
 ---
 
 I've spent two or three days working on the [Birthright Resource Utility (BRUt)][github-brut] and have managed to implement displaying the file index and exporting uncompressed files. Unfortunately, I've run into a bit of a problem with extracting compressed files.

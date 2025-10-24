@@ -2,7 +2,8 @@
 title: "Decompression Progress"
 date: 2024-08-29
 categories: [Birthright]
-series: ["Modding Birthright: The Gorgon's Alliance"]
+tags: [BRUT]
+series: ["modding-birthright-the-gorgons-alliance"]
 ---
 
 I've made far less progress than I was hoping. Part of the delay is just being busy with life. The algorithm isn't really **that** complicated. There are some technical things about assembly language that I've had to relearn, like how the [EFLAGS](https://en.wikipedia.org/wiki/FLAGS_register) register works with bitshifting. (Specifically, the carry flag (CF) is relevant to this algorithm.) I also watched [a great lecture](https://www.youtube.com/watch?v=VDXBnmr8AY0) on LZSS to understand the basics of what the algorithm was likely to do.

@@ -5,6 +5,12 @@
 	{{ if and (not .IsSection) (eq .Section "series") }}
 	<div><b>A <a href="{{ relURL "/" }}series.html">series</a>.</b></div>
 	{{end}}
+	{{ if and (not .IsSection) (eq .Section "categories") }}
+	<div><b>A <a href="{{ relURL "/" }}categories.html">category</a>.</b></div>
+	{{end}}
+	{{ if and (not .IsSection) (eq .Section "tags") }}
+	<div><b>A <a href="{{ relURL "/" }}tags.html">tag</a>.</b></div>
+	{{end}}
 </div>
 <div id="content" class="container">
 	{{ .Content }}

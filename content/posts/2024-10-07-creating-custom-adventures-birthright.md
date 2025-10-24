@@ -2,7 +2,8 @@
 title: "Creating Custom Adventures for Birthright: The Gorgon's Alliance"
 date: 2024-10-07
 categories: [Birthright]
-series: ["Modding Birthright: The Gorgon's Alliance"]
+tags: [BRUT]
+series: ["modding-birthright-the-gorgons-alliance"]
 ---
 
 Implementing LZSS compression in [BRUT][github-brut] is still on my task list. I've written out a first draft of the algorithm, which is giving me some trouble. I hope to get that implemented soon. Since I've been staring at assembly language far too much, I decided to dig deeper into what we know about Birthright's adventures, especially how they're defined, referenced, and loaded. In the future, I'll build a reference page to make finding some of the technical information necessary for proper level building easier.
