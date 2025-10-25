@@ -26,6 +26,6 @@
 	{{- $next := (index (where $posts.ByDate ".Date.Unix" "gt" $.Page.Date.Unix) 0) }}
 	<div class="previous-next-post-links">
 		<div>{{- with $prev }}<a class="arrow arrow__left" href="{{ $prev.RelPermalink }}">{{ $prev.Title | truncate 70 }}</a>{{- end }}</div>
-		<div class="nav-label"><a href="{{ relURL "/" }}series.html">Series</a>: <a href="{{ relURL "/" }}series/{{ $series | urlize }}.html">{{$series}}</a></div>
+        {{ range first 1 .Params.series }}<div class="nav-label"><a href="{{ relURL "/" }}series.html">Series</a>: <a href="{{ (site.GetPage .).Path }}.html">{{ (site.GetPage .).Title }}</a></b></div>{{ end }}
 		<div>{{ with $next }}<a class="arrow arrow__right" href="{{ $next.RelPermalink }}">{{ $next.Title | truncate 70 }}</a>{{ end }}</div>
 	</div>
