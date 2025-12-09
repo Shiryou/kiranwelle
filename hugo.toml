@@ -11,19 +11,19 @@ tag = "tags"
 series = "series"
 
 [permalinks.page]
-    posts = "/posts/:year/:month/:slug/"
+posts = "/posts/:year/:month/:slug/"
 
 [frontmatter]
-    date = [":filename", ":default", ":fileModTime"]
+date = [":filename", ":default", ":fileModTime"]
 
 [markup.goldmark.renderer]
 unsafe = true
 
 [markup.goldmark.parser.attribute]
-    block = true
+block = true
 
 [params]
-    dateFormat = "Jan 2, 2006"
-    dateFormatYearless = "Jan 2"
-    timeFormat = "03:04 PM"
-    dateTimeFormat = "03:04 PM on Jan 2, 2006"
+dateFormat = "Jan 2, 2006"
+dateFormatYearless = "Jan 2"
+timeFormat = "03:04 PM"
+dateTimeFormat = "03:04 PM on Jan 2, 2006"
