@@ -1,14 +1,14 @@
 
 	<div class="previous-next-post-links">
 		<div>
-{{- if .PrevPage -}}
-			<a class="arrow arrow__left" href="{{ .PrevPage.RelPermalink }}">{{ .PrevPage.Title | truncate 70 }}</a>
+{{- if .Prev -}}
+			<a class="arrow arrow__left" href="{{ .Prev.RelPermalink }}">{{ .Prev.Title | truncate 70 }}</a>
 {{- end -}}
 		</div>
 		<div class="nav-label"><a href="{{ relURL "/" }}posts.html">All Posts</a></div>
 		<div>
-{{- if .NextPage -}}
-				<a class="arrow arrow__right" href="{{ .NextPage.RelPermalink }}">{{ .NextPage.Title | truncate 70 }}</a>
+{{- if .Next -}}
+				<a class="arrow arrow__right" href="{{ .Next.RelPermalink }}">{{ .Next.Title | truncate 70 }}</a>
 {{- end -}}
 		</div>
 	</div>
