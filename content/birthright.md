@@ -13,7 +13,7 @@ series: ["birthright-the-gorgons-alliance-support"]
 
 <article>
 
-![](/img/posts/birthright/cover-middlebw.jpg)
+![image](/img/posts/birthright/cover-middlebw.jpg)
 
 One of the things I find most interesting about desktop support is trying to support legacy hardware and software. Not only does it provide an opportunity to learn more about the history of computing, but it also tends to provide some interesting compatibility challenges. The place where I run into this most often and that I think gets the most words written about it on the Internet is in getting old games running on modern hardware and operating systems. Surprisingly, Windows 10 & 11 still support a wide array of classic games that one might expect would never run. That includes the title I'm writing about today: *Birthright: The Gorgon's Alliance*.
 
@@ -32,39 +32,39 @@ Getting the game running in Windows 10 & 11 is surprisingly easy. You only need 
 * [Character Editor](http://www.birthright.net/forums/downloads.php?do=file&id=91) (optional) to mod the game. (Also available from [Sierra Help Pages](https://web.archive.org/web/20170626031633/http://www.sierrahelp.com/Games/BirthrightHelp.html) and the Birthright Preservation Patch.)
 * [ipxwrapper](https://github.com/solemnwarning/ipxwrapper/releases) (optional) for multiplayer.
 
-![](/img/posts/birthright/cd.png)
+![image](/img/posts/birthright/cd.png)
 
 1. Insert the CD into the CD-ROM drive or mount the ISO image of the CD by double-clicking it.
 
-![](/img/posts/birthright/birthrt.png)
+![image](/img/posts/birthright/birthrt.png)
 
 2. Create a folder named BIRTHRT in the root of the C drive.
 
-![](/img/posts/birthright/copy.png)
+![image](/img/posts/birthright/copy.png)
 
 3. Copy all the files from the CD to the BIRTHRT folder.
 
-![](/img/posts/birthright/extract.png)
+![image](/img/posts/birthright/extract.png)
 
 4. Extract the contents of the patch and, if desired, the Scenario Editor and Character Editor.
 
-![](/img/posts/birthright/patch.png)
+![image](/img/posts/birthright/patch.png)
 
 5. patch.exe is an installer file that will not run on Windows 10 or 11. Instead, use 7-zip to extract all the files from the executable.
 
-![](/img/posts/birthright/patch_warn.png)
+![image](/img/posts/birthright/patch_warn.png)
 
 6. You'll likely see a warning that the file could not be opened as a [PE] archive and was opened as a [zip] archive instead. This is fine and doesn't require any action.
 
-![](/img/posts/birthright/move.png)
+![image](/img/posts/birthright/move.png)
 
 7. Move the resulting files from the last two steps to the BIRTHRT folder.
 
-![](/img/posts/birthright/logo.png)
+![image](/img/posts/birthright/logo.png)
 
 8. Double-click WINBR.EXE to start the game.
 
-![](/img/posts/birthright/editors.png)
+![image](/img/posts/birthright/editors.png)
 
 9. If you included them in the setup, you can also double-click `CHARED.EXE` or `SCENED95.EXE` to start the Character Editor or Scenario Editor, respectively.
 10. If desired, extract the Birthright Preservation Patch into the BIRTHRT folder to remove the requirement to have the CD inserted/mounted.
@@ -80,21 +80,21 @@ Since Sierra's servers are no longer active, the only option you have available 
 1. Extract the contents of the latest ipxwrapper release archive into the BIRTHRT folder.
 2. Double-click the `directplay-win32.reg` or `directplay-win64.reg` file, depending on [your system architecture](https://support.microsoft.com/en-us/office/determine-whether-your-computer-is-running-a-32-bit-version-or-64-bit-version-of-the-windows-operating-system-aac162a1-0cb3-46f2-888f-2f22897396ce).
 
-![](/img/posts/birthright/multcommon1.png)
+![image](/img/posts/birthright/multcommon1.png)
 
 3. Run `WINBR.EXE` and select the *Multiplayer* option in the main menu.
 
-![](/img/posts/birthright/multcommon2.png)
+![image](/img/posts/birthright/multcommon2.png)
 
 4. Select *Local Area Network or Modem* and click *Done*.
-![](/img/posts/birthright/multcommon3.png)
+![image](/img/posts/birthright/multcommon3.png)
 
 5. In the *Windows Features* dialog that comes up, select *Install this feature* to install **DirectPlay**. This window may open in the background behind your game, making it look like your game just froze. It may also take some time to install.
 
-![](/img/posts/birthright/multcommon4.png)
+![image](/img/posts/birthright/multcommon4.png)
 
 6. Click the *Close* button.
-![](/img/posts/birthright/multcommon5.png)
+![image](/img/posts/birthright/multcommon5.png)
 
 7. In the *Windows Security Alert* dialog, select which networks the game should be allowed to communicate on and then click *Allow Access*.  
 This is for the `WINBR.EXE` executable. You'll see another for Windows' DirectPlay feature later.
@@ -105,23 +105,23 @@ This is for the `WINBR.EXE` executable. You'll see another for Windows' DirectPl
 
 </ol></ol>
 
-![](/img/posts/birthright/multhost1.png)
+![image](/img/posts/birthright/multhost1.png)
 
 1. On the *Multiplayer* screen, enter your name, select *IPX*, and click *Create*. **Note:** If IPX is not an option, this means that ipxwrapper was not properly setup.
 
-![](/img/posts/birthright/multhost2.png)
+![image](/img/posts/birthright/multhost2.png)
 
 2. Give the game a meaningful name, select the number of players that will be in the game (including yourself), and click *Host*
 
-![](/img/posts/birthright/multcommon6.png)
+![image](/img/posts/birthright/multcommon6.png)
 
 3. In the *Windows Security Alert* dialog, select which networks the game should be allowed to communicate on and then click *Allow Access*. This is for Windows' DirectPlay feature. You'll see another for Windows' DirectPlay feature later.
 
-![](/img/posts/birthright/multhost3.png)
+![image](/img/posts/birthright/multhost3.png)
 
 4. Wait for the other players to join the game.
 
-![](/img/posts/birthright/multhost4.png)
+![image](/img/posts/birthright/multhost4.png)
 
 5. When all players have joined, select the game options.
 
@@ -131,20 +131,20 @@ This is for the `WINBR.EXE` executable. You'll see another for Windows' DirectPl
 
 </ol></ol>
 
-![](/img/posts/birthright/multplayer1.png)
+![image](/img/posts/birthright/multplayer1.png)
 
 1. On the *Multiplayer* screen, enter your name, select *IPX*, and click *Join*. **Note:** If IPX is not an option, this means that ipxwrapper was not properly setup.
 
 
-![](/img/posts/birthright/multcommon6.png)
+![image](/img/posts/birthright/multcommon6.png)
 
 2. In the *Windows Security Alert* dialog, select which networks the game should be allowed to communicate on and then click *Allow Access*. This is for Windows' DirectPlay feature. You'll see another for Windows' DirectPlay feature later.
 
-![](/img/posts/birthright/multplayer2.png)
+![image](/img/posts/birthright/multplayer2.png)
 
 3. The game host should provide you with the name of the game. It may take a few moments for the game to list the available games. Once it appears, select the game and click *Join*
 
-![](/img/posts/birthright/multplayer3.png)
+![image](/img/posts/birthright/multplayer3.png)
 
 4. Once all players have joined and the host configures the game settings, you should be presented with the domain selection screen.
 
@@ -188,25 +188,25 @@ It's not necessary to install the two SDKs. You can simply extract the include d
 
 ###### failed writing initial conditions file
 
-![](/img/posts/birthright/initial_cond.png)
+![image](/img/posts/birthright/initial_cond.png)
 
 When I first started testing this setup on a different PC, I ran into an error message after the intro cinematic saying "failed writing initial conditions file". This was caused by the fact that I transferred the files from the CD to my computer using TeraCopy, which marked the files as read-only. To solve this:
 
 1. Select all the files in the BIRTHRT folder.
 2. Right-click the selected files and click *Properties*.
 
-![](/img/posts/birthright/read_only.png)
+![image](/img/posts/birthright/read_only.png)
 
 3. Uncheck the *Read-only* option and click *OK*.
 4. Select *Apply changes to the selected items, subfolders and files* and click *OK*.
 
 ###### Please insert your Birthright CD
 
-![](/img/posts/birthright/no_cd.png)
+![image](/img/posts/birthright/no_cd.png)
 
 If you have your CD inserted, but you see the error message "Please insert your Birthright CD. Click Cancel to exit.", it likely means that the drive letter of the CD has changed. To fix this:
 
-![](/img/posts/birthright/cfg_file.png)
+![image](/img/posts/birthright/cfg_file.png)
 
 1. Open the file `BRSETUP.CFG` in any text editor.
 1. Change the letter beneath the text `[CD]` to the drive letter of the CD.
