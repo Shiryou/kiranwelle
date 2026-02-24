@@ -124,7 +124,7 @@ dd {
 }
 
 .me {
-    background: url('https://worthwelle.com/img/sandiego-blur.jpg');
+    background: url('/img/sandiego-blur.jpg');
     background-position: top;
     background-size: cover;
     overflow: hidden;
@@ -133,7 +133,7 @@ dd {
 }
 
 .title {
-    background: url('https://worthwelle.com/img/sandiego-blur.jpg');
+    background: url('/img/sandiego-blur.jpg');
     background-position: top;
     background-size: cover;
     text-align: right;
