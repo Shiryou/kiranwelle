@@ -1,7 +1,7 @@
 ---
 title: "One Build, Infinite Logging: Configuration Over Compilation"
 comments: true
-date: 2025-01-29 16:37:22 -0800
+date: 2026-01-29 16:37:22 -0800
 tags: [BirP, logging]
 categories: [Birthright]
 series: ["rebuilding-birthright-the-gorgons-alliance"]
