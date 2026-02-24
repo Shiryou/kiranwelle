@@ -2,6 +2,8 @@
 {{ $image := resources.Get (printf "%s" (.Destination | safeURL)) }}
 {{ if $image }}
 <img src="{{ $image.RelPermalink }}" alt="{{ .Text }}" {{ with .Title }} title="{{ . }}"{{ end }}>
+{{ else }}
+{{- /* <!-- RelPermalink failed on {{ .Destination}}. //--> */ -}}
 {{ end }}
 {{ else }}
 <img src="{{ .Destination }}" alt="{{ .Text }}" {{ with .Title }} title="{{ . }}"{{ end }}>
