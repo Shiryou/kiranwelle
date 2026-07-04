@@ -29,7 +29,7 @@ An installer is in the works that will install the patch for you and (optionally
 
 ## Download
 
-<iframe width="600" height="180" style="display: block; margin: auto;" src="https://www.moddb.com/mods/birthright-preservation-patch/downloads/birthrt-preservation-patch-1404/widget" frameborder="0"></iframe>
+<iframe width="600" height="180" style="display: block; margin: auto;" src="https://www.moddb.com/mods/birthright-preservation-patch/downloads/birthright-preservation-patch-141-installer/widget" frameborder="0"></iframe>
 
 ## Changelog
 
