@@ -28,8 +28,7 @@ Getting the game running in Windows 10 & 11 is surprisingly easy. You only need 
 * [Patch 1.4](http://www.birthright.net/forums/downloads.php?do=file&id=93) to update the game to the latest version. (Also available from [Sierra Help Pages](https://web.archive.org/web/20170626004704/https://sierrahelp.com/Patches-Updates/Patches-Updates-Games/BirthrightUpdates.html), referred to as Birthright Windows '95 Update 1.0.4.)
 * [7-zip](https://www.7-zip.org/download.html) to extract the game files from the 1.4 patch.
 * [Birthright Preservation Patch]({{< ref "birthright-patch.md" >}}) (optional) to get quality of life improvements for the game
-* [Scenario Editor](http://www.birthright.net/forums/downloads.php?do=file&id=94) (optional) to mod the game.
-* [Character Editor](http://www.birthright.net/forums/downloads.php?do=file&id=91) (optional) to mod the game. (Also available from [Sierra Help Pages](https://web.archive.org/web/20170626031633/http://www.sierrahelp.com/Games/BirthrightHelp.html) and the Birthright Preservation Patch.)
+* [Scenario Editor and/or Character Editor](https://forum.birthright.net/t/birthright-the-gorgons-alliance-character-editor-and-scenario-editor/35896) (optional) to mod the game. (The Character Editor is also available from [Sierra Help Pages](https://web.archive.org/web/20170626031633/http://www.sierrahelp.com/Games/BirthrightHelp.html) and in the Birthright Preservation Patch.)
 * [ipxwrapper](https://github.com/solemnwarning/ipxwrapper/releases) (optional) for multiplayer.
 
 ![image](/img/posts/birthright/cd.png)
