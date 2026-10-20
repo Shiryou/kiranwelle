@@ -12,9 +12,19 @@ series: ["birthright-the-gorgons-alliance-support"]
 
 The **Birthright Preservation Patch** is an enhancement patch for Birthright: The Gorgon's Alliance, addressing bugs and improving usability of the game and the associated Character Editor utility.
 
-Development is currently focusing on bugs reported to the project's [issue tracker](https://github.com/Shiryou/BirP/issues). Feel free to report bugs or request new features here or on the ModDB page. I try to keep track of them as well as I can.
+Development is currently focusing on bugs reported to the project's [issue tracker](https://github.com/birthrightnet/BirP/issues). Feel free to report bugs or request new features here or on the ModDB page. I try to keep track of them as well as I can.
+
+For a detailed breakdown of what the patch changes, please review the [changelog](https://github.com/birthrightnet/BirP/blob/develop/CHANGELOG.md).
 
 ## Installation
+
+### Installer
+
+The easiest way to install the patch is to have your game CD ready and download the installer package ([see below](#download)). This will install the game and update it to the latest version for you.
+
+### Archive
+
+If you'd rather install the game yourself, you can follow the directions below.
 
 An installer is in the works that will install the patch for you and (optionally) also the game and patch 1.4. That will be announced on ModDB and in the <a href="/series/rebuilding-birthright-the-gorgons-alliance.html">Rebuilding Birthright: The Gorgon's Alliance</a> series once it's ready.
 
@@ -29,16 +39,8 @@ An installer is in the works that will install the patch for you and (optionally
 
 ## Download
 
-<iframe width="600" height="180" style="display: block; margin: auto;" src="https://www.moddb.com/mods/birthright-preservation-patch/downloads/birthright-preservation-patch-141-installer/widget" frameborder="0"></iframe>
+<iframe width="600" height="180" style="display: block; margin: auto;" src="https://www.moddb.com/mods/birthright-preservation-patch/downloads/birthright-preservation-patch-142-installer/widget" frameborder="0"></iframe>
 
-## Changelog
+<br />
 
-### Changed
-
-- Allow calling all files form game directory instead of CD. ([#2](https://github.com/Shiryou/BirP/issues/2))  
-  (All files must be copied from the CD to the game directory before launching with this option.)
-- Replace timestamps with build numbers for more reproducible builds. ([#7](https://github.com/Shiryou/BirP/issues/7))
-
-### Fixed
-
-- Custom adventures no longer crash the game when picking up the quest goal item. ([#3](https://github.com/Shiryou/BirP/issues/3))
+<iframe width="600" height="180" style="display: block; margin: auto;" src="https://www.moddb.com/mods/birthright-preservation-patch/downloads/birthright-preservation-patch-142-archive/widget" frameborder="0"></iframe>

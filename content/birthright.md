@@ -25,7 +25,7 @@ One of the things I find most interesting about desktop support is trying to sup
 Getting the game running in Windows 10 & 11 is surprisingly easy. You only need a few things to get started:
 
 * A Birthright: The Gorgon's Alliance CD or an ISO image of the CD. (These can sometimes be found on eBay. Sadly, the game is no longer sold on any digital storefronts.)
-* [Patch 1.4](http://www.birthright.net/forums/downloads.php?do=file&id=93) to update the game to the latest version. (Also available from [Sierra Help Pages](https://web.archive.org/web/20170626004704/https://sierrahelp.com/Patches-Updates/Patches-Updates-Games/BirthrightUpdates.html), referred to as Birthright Windows '95 Update 1.0.4.)
+* [Patch 1.4](https://forum.birthright.net/t/gorgons-alliance-patches/35933) to update the game to the latest version. (Also available from [Sierra Help Pages](https://web.archive.org/web/20170626004704/https://sierrahelp.com/Patches-Updates/Patches-Updates-Games/BirthrightUpdates.html), referred to as Birthright Windows '95 Update 1.0.4.)
 * [7-zip](https://www.7-zip.org/download.html) to extract the game files from the 1.4 patch.
 * [Birthright Preservation Patch]({{< ref "birthright-patch.md" >}}) (optional) to get quality of life improvements for the game
 * [Scenario Editor and/or Character Editor](https://forum.birthright.net/t/birthright-the-gorgons-alliance-character-editor-and-scenario-editor/35896) (optional) to mod the game. (The Character Editor is also available from [Sierra Help Pages](https://web.archive.org/web/20170626031633/http://www.sierrahelp.com/Games/BirthrightHelp.html) and in the Birthright Preservation Patch.)
